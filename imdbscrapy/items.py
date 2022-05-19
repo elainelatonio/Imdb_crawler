@@ -14,8 +14,11 @@ class Imdb_item(scrapy.Item):
     movie_link = scrapy.Field()
     rating = scrapy.Field()
     genre = scrapy.Field()
-    runtime = scrapy.Field()
+    runtime_mins = scrapy.Field()
     budget = scrapy.Field()
     origin = scrapy.Field()
-    mpaa_rating = scrapy.Field()
+    votes = scrapy.Field()
+    awards_wins = scrapy.Field()
+    awards_nominations = scrapy.Field()
+    gross_worldwide_usd = scrapy.Field()
 
