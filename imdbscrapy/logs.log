@@ -1,0 +1,4692 @@
+INFO:scrapy.utils.log:Scrapy 2.6.1 started (bot: scrapybot)
+INFO:scrapy.utils.log:Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 3.0.3 3 May 2022), cryptography 37.0.2, Platform Windows-10-10.0.22000-SP0
+INFO:scrapy.crawler:Overridden settings:
+{}
+DEBUG:scrapy.utils.log:Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO:scrapy.extensions.telnet:Telnet Password: 4ed2ded9979b4fbc
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+ERROR:scrapy.utils.signal:Error caught on signal handler: <bound method FeedExporter.open_spider of <scrapy.extensions.feedexport.FeedExporter object at 0x0000018DD2BA6830>>
+Traceback (most recent call last):
+  File "C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\utils\defer.py", line 169, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 337, in open_spider
+    self.slots.append(self._start_new_batch(
+  File "C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 394, in _start_new_batch
+    file = storage.open(spider)
+  File "C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\scrapy\extensions\feedexport.py", line 148, in open
+    return open(self.path, self.write_mode)
+PermissionError: [Errno 13] Permission denied: 'IMDBTop250.csv'
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.downloadermiddlewares.redirect:Redirecting (301) to <GET https://www.imdb.com/chart/top> from <GET http://www.imdb.com/chart/top>
+DEBUG:filelock:Attempting to acquire lock 1708643248464 on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Lock 1708643248464 acquired on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Attempting to release lock 1708643248464 on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Lock 1708643248464 released on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/chart/top> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0111161/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071315/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0266543/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0080678/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0111161/>
+{'awards_nominations': '43',
+ 'awards_wins': '21',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '28,884,504',
+ 'movie_id': 'tt0111161',
+ 'movie_link': 'https://www.imdb.com/title/tt0111161/',
+ 'origin': ['United States'],
+ 'rank': '1',
+ 'rating': '9.233688356871141',
+ 'runtime_mins': 142,
+ 'title': 'The Shawshank Redemption',
+ 'votes': '2588516',
+ 'year': '1994'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0477348/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071315/>
+{'awards_nominations': '24',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '29,225,935',
+ 'movie_id': 'tt0071315',
+ 'movie_link': 'https://www.imdb.com/title/tt0071315/',
+ 'origin': ['United States'],
+ 'rank': '156',
+ 'rating': '8.129250674594552',
+ 'runtime_mins': 130,
+ 'title': 'Chinatown',
+ 'votes': '319902',
+ 'year': '1974'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0081398/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0266543/>
+{'awards_nominations': '63',
+ 'awards_wins': '48',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family'],
+ 'gross_worldwide_usd': '940,352,645',
+ 'movie_id': 'tt0266543',
+ 'movie_link': 'https://www.imdb.com/title/tt0266543/',
+ 'origin': ['United States'],
+ 'rank': '154',
+ 'rating': '8.131159102460545',
+ 'runtime_mins': 40,
+ 'title': 'Finding Nemo',
+ 'votes': '1017817',
+ 'year': '2003'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0266697/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0080678/>
+{'awards_nominations': '22',
+ 'awards_wins': '10',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '26,023,860',
+ 'movie_id': 'tt0080678',
+ 'movie_link': 'https://www.imdb.com/title/tt0080678/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '153',
+ 'rating': '8.131481586623647',
+ 'runtime_mins': 124,
+ 'title': 'The Elephant Man',
+ 'votes': '237102',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0477348/>
+{'awards_nominations': '140',
+ 'awards_wins': '163',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '171,627,166',
+ 'movie_id': 'tt0477348',
+ 'movie_link': 'https://www.imdb.com/title/tt0477348/',
+ 'origin': ['United States'],
+ 'rank': '152',
+ 'rating': '8.134923775883339',
+ 'runtime_mins': 122,
+ 'title': 'No Country for Old Men',
+ 'votes': '942262',
+ 'year': '2007'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0107290/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0081398/>
+{'awards_nominations': '28',
+ 'awards_wins': '24',
+ 'genre': ['Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '23,402,427',
+ 'movie_id': 'tt0081398',
+ 'movie_link': 'https://www.imdb.com/title/tt0081398/',
+ 'origin': ['United States'],
+ 'rank': '155',
+ 'rating': '8.130513960454497',
+ 'runtime_mins': 129,
+ 'title': 'Raging Bull',
+ 'votes': '346311',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0266697/>
+{'awards_nominations': '104',
+ 'awards_wins': '29',
+ 'genre': ['Action', 'Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '180,906,076',
+ 'movie_id': 'tt0266697',
+ 'movie_link': 'https://www.imdb.com/title/tt0266697/',
+ 'origin': ['United States'],
+ 'rank': '150',
+ 'rating': '8.137210885896343',
+ 'runtime_mins': 51,
+ 'title': 'Kill Bill: Vol. 1',
+ 'votes': '1084714',
+ 'year': '2003'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0107290/>
+{'awards_nominations': '27',
+ 'awards_wins': '44',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '1,099,428,303',
+ 'movie_id': 'tt0107290',
+ 'movie_link': 'https://www.imdb.com/title/tt0107290/',
+ 'origin': ['United States'],
+ 'rank': '151',
+ 'rating': '8.136954694121915',
+ 'runtime_mins': 127,
+ 'title': 'Jurassic Park',
+ 'votes': '946311',
+ 'year': '1993'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1130884/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1130884/>
+{'awards_nominations': '66',
+ 'awards_wins': '11',
+ 'genre': ['Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '294,805,697',
+ 'movie_id': 'tt1130884',
+ 'movie_link': 'https://www.imdb.com/title/tt1130884/',
+ 'origin': ['United States'],
+ 'rank': '149',
+ 'rating': '8.141938579948139',
+ 'runtime_mins': 138,
+ 'title': 'Shutter Island',
+ 'votes': '1259175',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0040897/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0055630/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0040897/>
+{'awards_nominations': '8',
+ 'awards_wins': '16',
+ 'genre': ['Adventure', 'Drama', 'Western'],
+ 'gross_worldwide_usd': '5,014,000',
+ 'movie_id': 'tt0040897',
+ 'movie_link': 'https://www.imdb.com/title/tt0040897/',
+ 'origin': ['United States'],
+ 'rank': '146',
+ 'rating': '8.147843838309106',
+ 'runtime_mins': 126,
+ 'title': 'The Treasure of the Sierra Madre',
+ 'votes': '123192',
+ 'year': '1948'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0268978/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0055630/>
+{'awards_nominations': '2',
+ 'awards_wins': '4',
+ 'genre': ['Action', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '46,808',
+ 'movie_id': 'tt0055630',
+ 'movie_link': 'https://www.imdb.com/title/tt0055630/',
+ 'origin': ['Japan'],
+ 'rank': '145',
+ 'rating': '8.149291469983174',
+ 'runtime_mins': 50,
+ 'title': 'Yojimbo',
+ 'votes': '120936',
+ 'year': '1961'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0042876/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071853/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120382/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0057115/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0268978/>
+{'awards_nominations': '69',
+ 'awards_wins': '37',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '316,791,257',
+ 'movie_id': 'tt0268978',
+ 'movie_link': 'https://www.imdb.com/title/tt0268978/',
+ 'origin': ['United States'],
+ 'rank': '142',
+ 'rating': '8.153307030889655',
+ 'runtime_mins': 135,
+ 'title': 'A Beautiful Mind',
+ 'votes': '911173',
+ 'year': '2001'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0042876/>
+{'awards_nominations': '5',
+ 'awards_wins': '9',
+ 'genre': ['Crime', 'Drama', 'Mystery'],
+ 'gross_worldwide_usd': '46,808',
+ 'movie_id': 'tt0042876',
+ 'movie_link': 'https://www.imdb.com/title/tt0042876/',
+ 'origin': ['Japan'],
+ 'rank': '147',
+ 'rating': '8.14355687606251',
+ 'runtime_mins': 28,
+ 'title': 'Rashomon',
+ 'votes': '165599',
+ 'year': '1950'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071853/>
+{'awards_nominations': '3',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Comedy', 'Fantasy'],
+ 'gross_worldwide_usd': '1,940,906',
+ 'movie_id': 'tt0071853',
+ 'movie_link': 'https://www.imdb.com/title/tt0071853/',
+ 'origin': ['United Kingdom'],
+ 'rank': '143',
+ 'rating': '8.15325228993814',
+ 'runtime_mins': 31,
+ 'title': 'Monty Python and the Holy Grail',
+ 'votes': '531767',
+ 'year': '1975'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0057115/>
+{'awards_nominations': '11',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Drama', 'History', 'Thriller', 'War'],
+ 'gross_worldwide_usd': '228,178',
+ 'movie_id': 'tt0057115',
+ 'movie_link': 'https://www.imdb.com/title/tt0057115/',
+ 'origin': ['United States'],
+ 'rank': '148',
+ 'rating': '8.142601516864099',
+ 'runtime_mins': 172,
+ 'title': 'The Great Escape',
+ 'votes': '240851',
+ 'year': '1963'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120382/>
+{'awards_nominations': '69',
+ 'awards_wins': '40',
+ 'genre': ['Comedy', 'Drama'],
+ 'gross_worldwide_usd': '264,118,201',
+ 'movie_id': 'tt0120382',
+ 'movie_link': 'https://www.imdb.com/title/tt0120382/',
+ 'origin': ['United States'],
+ 'rank': '144',
+ 'rating': '8.150594978568474',
+ 'runtime_mins': 43,
+ 'title': 'The Truman Show',
+ 'votes': '1037633',
+ 'year': '1998'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0099348/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0099348/>
+{'awards_nominations': '38',
+ 'awards_wins': '51',
+ 'genre': ['Adventure', 'Drama', 'Western'],
+ 'gross_worldwide_usd': '424,208,848',
+ 'movie_id': 'tt0099348',
+ 'movie_link': 'https://www.imdb.com/title/tt0099348/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '249',
+ 'rating': '8.00171216618887',
+ 'runtime_mins': 180,
+ 'title': 'Dances with Wolves',
+ 'votes': '260215',
+ 'year': '1990'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt15097216/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0101414/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt15097216/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Crime', 'Drama', 'Mystery'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt15097216',
+ 'movie_link': 'https://www.imdb.com/title/tt15097216/',
+ 'origin': ['India'],
+ 'rank': '250',
+ 'rating': '8.001334291086026',
+ 'runtime_mins': 164,
+ 'title': 'Jai Bhim',
+ 'votes': '188941',
+ 'year': '2021'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0101414/>
+{'awards_nominations': '32',
+ 'awards_wins': '32',
+ 'genre': ['Animation', 'Family', 'Fantasy', 'Musical', 'Romance'],
+ 'gross_worldwide_usd': '424,967,620',
+ 'movie_id': 'tt0101414',
+ 'movie_link': 'https://www.imdb.com/title/tt0101414/',
+ 'origin': ['United States'],
+ 'rank': '248',
+ 'rating': '8.003686436877745',
+ 'runtime_mins': 24,
+ 'title': 'Beauty and the Beast',
+ 'votes': '442813',
+ 'year': '1991'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0103639/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4016934/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0083987/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0103639/>
+{'awards_nominations': '22',
+ 'awards_wins': '33',
+ 'genre': ['Animation',
+           'Adventure',
+           'Comedy',
+           'Family',
+           'Fantasy',
+           'Musical',
+           'Romance'],
+ 'gross_worldwide_usd': '504,050,219',
+ 'movie_id': 'tt0103639',
+ 'movie_link': 'https://www.imdb.com/title/tt0103639/',
+ 'origin': ['United States'],
+ 'rank': '246',
+ 'rating': '8.007038556031652',
+ 'runtime_mins': 30,
+ 'title': 'Aladdin',
+ 'votes': '403710',
+ 'year': '1992'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4016934/>
+{'awards_nominations': '108',
+ 'awards_wins': '70',
+ 'genre': ['Drama', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '37,767,206',
+ 'movie_id': 'tt4016934',
+ 'movie_link': 'https://www.imdb.com/title/tt4016934/',
+ 'origin': ['South Korea'],
+ 'rank': '244',
+ 'rating': '8.008992320567398',
+ 'runtime_mins': 145,
+ 'title': 'The Handmaiden',
+ 'votes': '138778',
+ 'year': '2016'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0083987/>
+{'awards_nominations': '21',
+ 'awards_wins': '35',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '52,767,889',
+ 'movie_id': 'tt0083987',
+ 'movie_link': 'https://www.imdb.com/title/tt0083987/',
+ 'origin': ['United Kingdom', 'India', 'United States', 'South Africa'],
+ 'rank': '245',
+ 'rating': '8.007179571386661',
+ 'runtime_mins': 191,
+ 'title': 'Gandhi',
+ 'votes': '228154',
+ 'year': '1982'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0025316/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0059742/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1454029/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0025316/>
+{'awards_nominations': '2',
+ 'awards_wins': '11',
+ 'genre': ['Comedy', 'Romance'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0025316',
+ 'movie_link': 'https://www.imdb.com/title/tt0025316/',
+ 'origin': ['United States'],
+ 'rank': '243',
+ 'rating': '8.013571040230172',
+ 'runtime_mins': 45,
+ 'title': 'It Happened One Night',
+ 'votes': '102338',
+ 'year': '1934'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0113247/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0059742/>
+{'awards_nominations': '13',
+ 'awards_wins': '17',
+ 'genre': ['Biography', 'Drama', 'Family', 'Musical', 'Romance'],
+ 'gross_worldwide_usd': '159,428,329',
+ 'movie_id': 'tt0059742',
+ 'movie_link': 'https://www.imdb.com/title/tt0059742/',
+ 'origin': ['United States'],
+ 'rank': '242',
+ 'rating': '8.013685284757715',
+ 'runtime_mins': 172,
+ 'title': 'The Sound of Music',
+ 'votes': '226790',
+ 'year': '1965'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1454029/>
+{'awards_nominations': '121',
+ 'awards_wins': '79',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '216,639,112',
+ 'movie_id': 'tt1454029',
+ 'movie_link': 'https://www.imdb.com/title/tt1454029/',
+ 'origin': ['United States'],
+ 'rank': '247',
+ 'rating': '8.00496966395011',
+ 'runtime_mins': 146,
+ 'title': 'The Help',
+ 'votes': '450152',
+ 'year': '2011'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0113247/>
+{'awards_nominations': '15',
+ 'awards_wins': '8',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '412,914',
+ 'movie_id': 'tt0113247',
+ 'movie_link': 'https://www.imdb.com/title/tt0113247/',
+ 'origin': ['France', 'United States'],
+ 'rank': '240',
+ 'rating': '8.015646229993344',
+ 'runtime_mins': 38,
+ 'title': 'La Haine',
+ 'votes': '168419',
+ 'year': '1995'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0476735/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0053198/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0079470/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0476735/>
+{'awards_nominations': '7',
+ 'awards_wins': '14',
+ 'genre': ['Drama', 'Family'],
+ 'gross_worldwide_usd': '18,612,999',
+ 'movie_id': 'tt0476735',
+ 'movie_link': 'https://www.imdb.com/title/tt0476735/',
+ 'origin': ['Turkey'],
+ 'rank': '238',
+ 'rating': '8.016146184342567',
+ 'runtime_mins': 52,
+ 'title': 'My Father and My Son',
+ 'votes': '85638',
+ 'year': '2005'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0053198/>
+{'awards_nominations': '7',
+ 'awards_wins': '10',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '127,244',
+ 'movie_id': 'tt0053198',
+ 'movie_link': 'https://www.imdb.com/title/tt0053198/',
+ 'origin': ['France'],
+ 'rank': '237',
+ 'rating': '8.016321337791092',
+ 'runtime_mins': 39,
+ 'title': 'The 400 Blows',
+ 'votes': '115618',
+ 'year': '1959'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0060827/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0079470/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Comedy'],
+ 'gross_worldwide_usd': '20,745,728',
+ 'movie_id': 'tt0079470',
+ 'movie_link': 'https://www.imdb.com/title/tt0079470/',
+ 'origin': ['United Kingdom'],
+ 'rank': '241',
+ 'rating': '8.015261118463146',
+ 'runtime_mins': 34,
+ 'title': 'Life of Brian',
+ 'votes': '393076',
+ 'year': '1979'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0325980/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0060827/>
+{'awards_nominations': '5',
+ 'awards_wins': '11',
+ 'genre': ['Drama', 'Thriller'],
+ 'gross_worldwide_usd': '90,556',
+ 'movie_id': 'tt0060827',
+ 'movie_link': 'https://www.imdb.com/title/tt0060827/',
+ 'origin': ['Sweden'],
+ 'rank': '239',
+ 'rating': '8.01599909174518',
+ 'runtime_mins': 23,
+ 'title': 'Persona',
+ 'votes': '115736',
+ 'year': '1966'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0325980/>
+{'awards_nominations': '104',
+ 'awards_wins': '38',
+ 'genre': ['Action', 'Adventure', 'Fantasy'],
+ 'gross_worldwide_usd': '654,264,015',
+ 'movie_id': 'tt0325980',
+ 'movie_link': 'https://www.imdb.com/title/tt0325980/',
+ 'origin': ['United States'],
+ 'rank': '236',
+ 'rating': '8.016913612234763',
+ 'runtime_mins': 143,
+ 'title': 'Pirates of the Caribbean: The Curse of the Black Pearl',
+ 'votes': '1085801',
+ 'year': '2003'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0245712/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0245712/>
+{'awards_nominations': '25',
+ 'awards_wins': '55',
+ 'genre': ['Drama', 'Thriller'],
+ 'gross_worldwide_usd': '20,908,467',
+ 'movie_id': 'tt0245712',
+ 'movie_link': 'https://www.imdb.com/title/tt0245712/',
+ 'origin': ['Mexico'],
+ 'rank': '234',
+ 'rating': '8.021386734427594',
+ 'runtime_mins': 154,
+ 'title': 'Amores perros',
+ 'votes': '237314',
+ 'year': '2000'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0058946/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0061512/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0035446/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0058946/>
+{'awards_nominations': '9',
+ 'awards_wins': '9',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '962,002',
+ 'movie_id': 'tt0058946',
+ 'movie_link': 'https://www.imdb.com/title/tt0058946/',
+ 'origin': ['Italy', 'Algeria'],
+ 'rank': '230',
+ 'rating': '8.02302714618762',
+ 'runtime_mins': 120,
+ 'title': 'The Battle of Algiers',
+ 'votes': '59134',
+ 'year': '1966'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032551/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0317705/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0061512/>
+{'awards_nominations': '10',
+ 'awards_wins': '4',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '67',
+ 'movie_id': 'tt0061512',
+ 'movie_link': 'https://www.imdb.com/title/tt0061512/',
+ 'origin': ['United States'],
+ 'rank': '233',
+ 'rating': '8.02158607849697',
+ 'runtime_mins': 127,
+ 'title': 'Cool Hand Luke',
+ 'votes': '174620',
+ 'year': '1967'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0035446/>
+{'awards_nominations': '2',
+ 'awards_wins': '2',
+ 'genre': ['Comedy', 'Romance', 'War'],
+ 'gross_worldwide_usd': '4,578,000',
+ 'movie_id': 'tt0035446',
+ 'movie_link': 'https://www.imdb.com/title/tt0035446/',
+ 'origin': ['United States'],
+ 'rank': '228',
+ 'rating': '8.024468771738967',
+ 'runtime_mins': 39,
+ 'title': 'To Be or Not to Be',
+ 'votes': '36079',
+ 'year': '1942'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1028532/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032551/>
+{'awards_nominations': '5',
+ 'awards_wins': '10',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0032551',
+ 'movie_link': 'https://www.imdb.com/title/tt0032551/',
+ 'origin': ['United States'],
+ 'rank': '231',
+ 'rating': '8.022276957619317',
+ 'runtime_mins': 129,
+ 'title': 'The Grapes of Wrath',
+ 'votes': '91709',
+ 'year': '1940'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0317705/>
+{'awards_nominations': '56',
+ 'awards_wins': '67',
+ 'genre': ['Animation', 'Action', 'Adventure', 'Family'],
+ 'gross_worldwide_usd': '631,607,053',
+ 'movie_id': 'tt0317705',
+ 'movie_link': 'https://www.imdb.com/title/tt0317705/',
+ 'origin': ['United States'],
+ 'rank': '227',
+ 'rating': '8.025174797204443',
+ 'runtime_mins': 55,
+ 'title': 'The Incredibles',
+ 'votes': '710906',
+ 'year': '2004'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032976/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1028532/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Biography', 'Drama', 'Family'],
+ 'gross_worldwide_usd': '46,749,646',
+ 'movie_id': 'tt1028532',
+ 'movie_link': 'https://www.imdb.com/title/tt1028532/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '232',
+ 'rating': '8.02179132860839',
+ 'runtime_mins': 33,
+ 'title': "Hachi: A Dog's Tale",
+ 'votes': '277948',
+ 'year': '2009'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032976/>
+{'awards_nominations': '10',
+ 'awards_wins': '7',
+ 'genre': ['Drama', 'Film-Noir', 'Mystery', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '72,275',
+ 'movie_id': 'tt0032976',
+ 'movie_link': 'https://www.imdb.com/title/tt0032976/',
+ 'origin': ['United States'],
+ 'rank': '229',
+ 'rating': '8.023040300028168',
+ 'runtime_mins': 130,
+ 'title': 'Rebecca',
+ 'votes': '135187',
+ 'year': '1940'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0036868/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071411/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0382932/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0036868/>
+{'awards_nominations': '4',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'Romance', 'War'],
+ 'gross_worldwide_usd': '23,656,620',
+ 'movie_id': 'tt0036868',
+ 'movie_link': 'https://www.imdb.com/title/tt0036868/',
+ 'origin': ['United States'],
+ 'rank': '226',
+ 'rating': '8.025856875590504',
+ 'runtime_mins': 170,
+ 'title': 'The Best Years of Our Lives',
+ 'votes': '63174',
+ 'year': '1946'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071411/>
+{'awards_nominations': '2',
+ 'awards_wins': '8',
+ 'genre': ['Adventure', 'Biography', 'Drama'],
+ 'gross_worldwide_usd': '14,480',
+ 'movie_id': 'tt0071411',
+ 'movie_link': 'https://www.imdb.com/title/tt0071411/',
+ 'origin': ['Soviet Union', 'Japan'],
+ 'rank': '235',
+ 'rating': '8.017966453185773',
+ 'runtime_mins': 142,
+ 'title': 'Dersu Uzala',
+ 'votes': '28317',
+ 'year': '1975'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0382932/>
+{'awards_nominations': '42',
+ 'awards_wins': '67',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '623,726,085',
+ 'movie_id': 'tt0382932',
+ 'movie_link': 'https://www.imdb.com/title/tt0382932/',
+ 'origin': ['United States'],
+ 'rank': '223',
+ 'rating': '8.03059370126014',
+ 'runtime_mins': 51,
+ 'title': 'Ratatouille',
+ 'votes': '704192',
+ 'year': '2007'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt3315342/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0107048/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032138/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0381681/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0070047/> (referer: https://www.imdb.com/chart/top)
+INFO:scrapy.crawler:Received SIGINT, shutting down gracefully. Send again to force 
+INFO:scrapy.core.engine:Closing spider (shutdown)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt3315342/>
+{'awards_nominations': '80',
+ 'awards_wins': '28',
+ 'genre': ['Action', 'Drama', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '619,179,950',
+ 'movie_id': 'tt3315342',
+ 'movie_link': 'https://www.imdb.com/title/tt3315342/',
+ 'origin': ['United States'],
+ 'rank': '221',
+ 'rating': '8.034762251558107',
+ 'runtime_mins': 137,
+ 'title': 'Logan',
+ 'votes': '730401',
+ 'year': '2017'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032138/>
+{'awards_nominations': '16',
+ 'awards_wins': '13',
+ 'genre': ['Adventure', 'Family', 'Fantasy', 'Musical'],
+ 'gross_worldwide_usd': '25,637,669',
+ 'movie_id': 'tt0032138',
+ 'movie_link': 'https://www.imdb.com/title/tt0032138/',
+ 'origin': ['United States'],
+ 'rank': '220',
+ 'rating': '8.03611446163347',
+ 'runtime_mins': 42,
+ 'title': 'The Wizard of Oz',
+ 'votes': '390310',
+ 'year': '1939'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0107048/>
+{'awards_nominations': '17',
+ 'awards_wins': '7',
+ 'genre': ['Comedy', 'Drama', 'Fantasy', 'Romance'],
+ 'gross_worldwide_usd': '71,108,591',
+ 'movie_id': 'tt0107048',
+ 'movie_link': 'https://www.imdb.com/title/tt0107048/',
+ 'origin': ['United States'],
+ 'rank': '222',
+ 'rating': '8.032934452771876',
+ 'runtime_mins': 41,
+ 'title': 'Groundhog Day',
+ 'votes': '615101',
+ 'year': '1993'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0381681/>
+{'awards_nominations': '32',
+ 'awards_wins': '9',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '15,936,507',
+ 'movie_id': 'tt0381681',
+ 'movie_link': 'https://www.imdb.com/title/tt0381681/',
+ 'origin': ['United States', 'France'],
+ 'rank': '225',
+ 'rating': '8.027988572624599',
+ 'runtime_mins': 20,
+ 'title': 'Before Sunset',
+ 'votes': '257375',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0070047/>
+{'awards_nominations': '17',
+ 'awards_wins': '16',
+ 'genre': ['Horror'],
+ 'gross_worldwide_usd': '441,306,145',
+ 'movie_id': 'tt0070047',
+ 'movie_link': 'https://www.imdb.com/title/tt0070047/',
+ 'origin': ['United States'],
+ 'rank': '224',
+ 'rating': '8.028670210403762',
+ 'runtime_mins': 122,
+ 'title': 'The Exorcist',
+ 'votes': '392520',
+ 'year': '1973'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0758758/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1950186/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0092005/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1895587/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0758758/>
+{'awards_nominations': '106',
+ 'awards_wins': '23',
+ 'genre': ['Adventure', 'Biography', 'Drama'],
+ 'gross_worldwide_usd': '56,675,895',
+ 'movie_id': 'tt0758758',
+ 'movie_link': 'https://www.imdb.com/title/tt0758758/',
+ 'origin': ['United States'],
+ 'rank': '218',
+ 'rating': '8.03838136288208',
+ 'runtime_mins': 148,
+ 'title': 'Into the Wild',
+ 'votes': '612329',
+ 'year': '2007'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1979320/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0088247/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1950186/>
+{'awards_nominations': '91',
+ 'awards_wins': '25',
+ 'genre': ['Action', 'Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '225,508,210',
+ 'movie_id': 'tt1950186',
+ 'movie_link': 'https://www.imdb.com/title/tt1950186/',
+ 'origin': ['United States'],
+ 'rank': '213',
+ 'rating': '8.045065311372715',
+ 'runtime_mins': 152,
+ 'title': 'Ford v Ferrari',
+ 'votes': '367450',
+ 'year': '2019'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0092005/>
+{'awards_nominations': '11',
+ 'awards_wins': '5',
+ 'genre': ['Adventure', 'Drama'],
+ 'gross_worldwide_usd': '52,287,414',
+ 'movie_id': 'tt0092005',
+ 'movie_link': 'https://www.imdb.com/title/tt0092005/',
+ 'origin': ['United States'],
+ 'rank': '214',
+ 'rating': '8.042479434124967',
+ 'runtime_mins': 29,
+ 'title': 'Stand by Me',
+ 'votes': '393617',
+ 'year': '1986'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1895587/>
+{'awards_nominations': '143',
+ 'awards_wins': '124',
+ 'genre': ['Biography', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '98,690,254',
+ 'movie_id': 'tt1895587',
+ 'movie_link': 'https://www.imdb.com/title/tt1895587/',
+ 'origin': ['United States'],
+ 'rank': '217',
+ 'rating': '8.039269236761161',
+ 'runtime_mins': 129,
+ 'title': 'Spotlight',
+ 'votes': '459675',
+ 'year': '2015'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1979320/>
+{'awards_nominations': '65',
+ 'awards_wins': '6',
+ 'genre': ['Action', 'Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '96,983,009',
+ 'movie_id': 'tt1979320',
+ 'movie_link': 'https://www.imdb.com/title/tt1979320/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '216',
+ 'rating': '8.039911217165908',
+ 'runtime_mins': 123,
+ 'title': 'Rush',
+ 'votes': '468912',
+ 'year': '2013'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0088247/>
+{'awards_nominations': '6',
+ 'awards_wins': '8',
+ 'genre': ['Action', 'Sci-Fi'],
+ 'gross_worldwide_usd': '78,371,200',
+ 'movie_id': 'tt0088247',
+ 'movie_link': 'https://www.imdb.com/title/tt0088247/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '215',
+ 'rating': '8.041336153290077',
+ 'runtime_mins': 47,
+ 'title': 'The Terminator',
+ 'votes': '842601',
+ 'year': '1984'}
+INFO:scrapy.utils.log:Scrapy 2.6.1 started (bot: scrapybot)
+INFO:scrapy.utils.log:Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.4.0, Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.0.0 (OpenSSL 3.0.3 3 May 2022), cryptography 37.0.2, Platform Windows-10-10.0.22000-SP0
+INFO:scrapy.crawler:Overridden settings:
+{}
+DEBUG:scrapy.utils.log:Using reactor: twisted.internet.selectreactor.SelectReactor
+INFO:scrapy.extensions.telnet:Telnet Password: 5bce4dcd9f621847
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+INFO:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.downloadermiddlewares.redirect:Redirecting (301) to <GET https://www.imdb.com/chart/top> from <GET http://www.imdb.com/chart/top>
+DEBUG:filelock:Attempting to acquire lock 2839180074752 on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Lock 2839180074752 acquired on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Attempting to release lock 2839180074752 on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:filelock:Lock 2839180074752 released on C:\Users\Elaine\AppData\Local\Programs\Python\Python310\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/chart/top> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0033467/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt8267604/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0022100/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0338013/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0057565/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0056172/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt8267604/>
+{'awards_nominations': '53',
+ 'awards_wins': '35',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '64,417,003',
+ 'movie_id': 'tt8267604',
+ 'movie_link': 'https://www.imdb.com/title/tt8267604/',
+ 'origin': ['Lebanon', 'France', 'Cyprus', 'Qatar', 'United Kingdom'],
+ 'rank': '94',
+ 'rating': '8.258359050934253',
+ 'runtime_mins': 126,
+ 'title': 'Capernaum',
+ 'votes': '84819',
+ 'year': '2018'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0033467/>
+{'awards_nominations': '13',
+ 'awards_wins': '11',
+ 'genre': ['Drama', 'Mystery'],
+ 'gross_worldwide_usd': '1,645,133',
+ 'movie_id': 'tt0033467',
+ 'movie_link': 'https://www.imdb.com/title/tt0033467/',
+ 'origin': ['United States'],
+ 'rank': '93',
+ 'rating': '8.258710117575566',
+ 'runtime_mins': 59,
+ 'title': 'Citizen Kane',
+ 'votes': '434537',
+ 'year': '1941'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0105236/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0022100/>
+{'awards_nominations': '',
+ 'awards_wins': '2',
+ 'genre': ['Crime', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '35,566',
+ 'movie_id': 'tt0022100',
+ 'movie_link': 'https://www.imdb.com/title/tt0022100/',
+ 'origin': ['Germany'],
+ 'rank': '96',
+ 'rating': '8.255021178279584',
+ 'runtime_mins': 39,
+ 'title': 'M',
+ 'votes': '155333',
+ 'year': '1931'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0057565/>
+{'awards_nominations': '3',
+ 'awards_wins': '3',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '46,808',
+ 'movie_id': 'tt0057565',
+ 'movie_link': 'https://www.imdb.com/title/tt0057565/',
+ 'origin': ['Japan'],
+ 'rank': '92',
+ 'rating': '8.26246519499024',
+ 'runtime_mins': 143,
+ 'title': 'High and Low',
+ 'votes': '42862',
+ 'year': '1963'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0338013/>
+{'awards_nominations': '111',
+ 'awards_wins': '73',
+ 'genre': ['Drama', 'Romance', 'Sci-Fi'],
+ 'gross_worldwide_usd': '74,036,715',
+ 'movie_id': 'tt0338013',
+ 'movie_link': 'https://www.imdb.com/title/tt0338013/',
+ 'origin': ['United States'],
+ 'rank': '91',
+ 'rating': '8.265085043470433',
+ 'runtime_mins': 48,
+ 'title': 'Eternal Sunshine of the Spotless Mind',
+ 'votes': '981671',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0056172/>
+{'awards_nominations': '15',
+ 'awards_wins': '31',
+ 'genre': ['Adventure', 'Biography', 'Drama', 'War'],
+ 'gross_worldwide_usd': '45,716,692',
+ 'movie_id': 'tt0056172',
+ 'movie_link': 'https://www.imdb.com/title/tt0056172/',
+ 'origin': ['United Kingdom'],
+ 'rank': '95',
+ 'rating': '8.256635245888196',
+ 'runtime_mins': 218,
+ 'title': 'Lawrence of Arabia',
+ 'votes': '288187',
+ 'year': '1962'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0111161/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0105236/>
+{'awards_nominations': '23',
+ 'awards_wins': '12',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '2,913,644',
+ 'movie_id': 'tt0105236',
+ 'movie_link': 'https://www.imdb.com/title/tt0105236/',
+ 'origin': ['United States'],
+ 'rank': '90',
+ 'rating': '8.265228532221771',
+ 'runtime_mins': 39,
+ 'title': 'Reservoir Dogs',
+ 'votes': '991008',
+ 'year': '1992'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0111161/>
+{'awards_nominations': '43',
+ 'awards_wins': '21',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '28,884,504',
+ 'movie_id': 'tt0111161',
+ 'movie_link': 'https://www.imdb.com/title/tt0111161/',
+ 'origin': ['United States'],
+ 'rank': '1',
+ 'rating': '9.233688356871141',
+ 'runtime_mins': 142,
+ 'title': 'The Shawshank Redemption',
+ 'votes': '2588516',
+ 'year': '1994'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt5311514/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1187043/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt5311514/>
+{'awards_nominations': '26',
+ 'awards_wins': '16',
+ 'genre': ['Animation', 'Drama', 'Fantasy', 'Romance'],
+ 'gross_worldwide_usd': '358,180,115',
+ 'movie_id': 'tt5311514',
+ 'movie_link': 'https://www.imdb.com/title/tt5311514/',
+ 'origin': ['Japan'],
+ 'rank': '86',
+ 'rating': '8.273618517185177',
+ 'runtime_mins': 46,
+ 'title': 'Your Name.',
+ 'votes': '250906',
+ 'year': '2016'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0045152/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0086190/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0062622/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1187043/>
+{'awards_nominations': '27',
+ 'awards_wins': '63',
+ 'genre': ['Comedy', 'Drama'],
+ 'gross_worldwide_usd': '60,262,836',
+ 'movie_id': 'tt1187043',
+ 'movie_link': 'https://www.imdb.com/title/tt1187043/',
+ 'origin': ['India'],
+ 'rank': '87',
+ 'rating': '8.268629539122527',
+ 'runtime_mins': 170,
+ 'title': '3 Idiots',
+ 'votes': '386359',
+ 'year': '2009'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0045152/>
+{'awards_nominations': '9',
+ 'awards_wins': '7',
+ 'genre': ['Comedy', 'Musical', 'Romance'],
+ 'gross_worldwide_usd': '1,923,485',
+ 'movie_id': 'tt0045152',
+ 'movie_link': 'https://www.imdb.com/title/tt0045152/',
+ 'origin': ['United States'],
+ 'rank': '85',
+ 'rating': '8.27398025674393',
+ 'runtime_mins': 43,
+ 'title': "Singin' in the Rain",
+ 'votes': '237329',
+ 'year': '1952'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0086190/>
+{'awards_nominations': '20',
+ 'awards_wins': '23',
+ 'genre': ['Action', 'Adventure', 'Fantasy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '475,106,177',
+ 'movie_id': 'tt0086190',
+ 'movie_link': 'https://www.imdb.com/title/tt0086190/',
+ 'origin': ['United States'],
+ 'rank': '88',
+ 'rating': '8.268459258485755',
+ 'runtime_mins': 131,
+ 'title': 'Star Wars: Episode VI - Return of the Jedi',
+ 'votes': '1022517',
+ 'year': '1983'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0435761/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0062622/>
+{'awards_nominations': '12',
+ 'awards_wins': '16',
+ 'genre': ['Adventure', 'Sci-Fi'],
+ 'gross_worldwide_usd': '65,877,808',
+ 'movie_id': 'tt0062622',
+ 'movie_link': 'https://www.imdb.com/title/tt0062622/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '89',
+ 'rating': '8.26612799485082',
+ 'runtime_mins': 149,
+ 'title': '2001: A Space Odyssey',
+ 'votes': '652073',
+ 'year': '1968'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0435761/>
+{'awards_nominations': '96',
+ 'awards_wins': '61',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '1,066,970,811',
+ 'movie_id': 'tt0435761',
+ 'movie_link': 'https://www.imdb.com/title/tt0435761/',
+ 'origin': ['United States'],
+ 'rank': '84',
+ 'rating': '8.277005408050837',
+ 'runtime_mins': 43,
+ 'title': 'Toy Story 3',
+ 'votes': '814209',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0119217/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0119217/>
+{'awards_nominations': '61',
+ 'awards_wins': '24',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '225,933,435',
+ 'movie_id': 'tt0119217',
+ 'movie_link': 'https://www.imdb.com/title/tt0119217/',
+ 'origin': ['United States'],
+ 'rank': '82',
+ 'rating': '8.286116822851817',
+ 'runtime_mins': 126,
+ 'title': 'Good Will Hunting',
+ 'votes': '938149',
+ 'year': '1997'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt15097216/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0103639/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt15097216/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Crime', 'Drama', 'Mystery'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt15097216',
+ 'movie_link': 'https://www.imdb.com/title/tt15097216/',
+ 'origin': ['India'],
+ 'rank': '250',
+ 'rating': '8.001334291086026',
+ 'runtime_mins': 164,
+ 'title': 'Jai Bhim',
+ 'votes': '188941',
+ 'year': '2021'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0101414/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0180093/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1454029/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0099348/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0103639/>
+{'awards_nominations': '22',
+ 'awards_wins': '33',
+ 'genre': ['Animation',
+           'Adventure',
+           'Comedy',
+           'Family',
+           'Fantasy',
+           'Musical',
+           'Romance'],
+ 'gross_worldwide_usd': '504,050,219',
+ 'movie_id': 'tt0103639',
+ 'movie_link': 'https://www.imdb.com/title/tt0103639/',
+ 'origin': ['United States'],
+ 'rank': '246',
+ 'rating': '8.007038556031652',
+ 'runtime_mins': 30,
+ 'title': 'Aladdin',
+ 'votes': '403710',
+ 'year': '1992'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0083987/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0180093/>
+{'awards_nominations': '70',
+ 'awards_wins': '37',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '7,390,108',
+ 'movie_id': 'tt0180093',
+ 'movie_link': 'https://www.imdb.com/title/tt0180093/',
+ 'origin': ['United States'],
+ 'rank': '83',
+ 'rating': '8.277578352901429',
+ 'runtime_mins': 42,
+ 'title': 'Requiem for a Dream',
+ 'votes': '821397',
+ 'year': '2000'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0101414/>
+{'awards_nominations': '32',
+ 'awards_wins': '32',
+ 'genre': ['Animation', 'Family', 'Fantasy', 'Musical', 'Romance'],
+ 'gross_worldwide_usd': '424,967,620',
+ 'movie_id': 'tt0101414',
+ 'movie_link': 'https://www.imdb.com/title/tt0101414/',
+ 'origin': ['United States'],
+ 'rank': '248',
+ 'rating': '8.003686436877745',
+ 'runtime_mins': 24,
+ 'title': 'Beauty and the Beast',
+ 'votes': '442813',
+ 'year': '1991'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1454029/>
+{'awards_nominations': '121',
+ 'awards_wins': '79',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '216,639,112',
+ 'movie_id': 'tt1454029',
+ 'movie_link': 'https://www.imdb.com/title/tt1454029/',
+ 'origin': ['United States'],
+ 'rank': '247',
+ 'rating': '8.00496966395011',
+ 'runtime_mins': 146,
+ 'title': 'The Help',
+ 'votes': '450152',
+ 'year': '2011'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0099348/>
+{'awards_nominations': '38',
+ 'awards_wins': '51',
+ 'genre': ['Adventure', 'Drama', 'Western'],
+ 'gross_worldwide_usd': '424,208,848',
+ 'movie_id': 'tt0099348',
+ 'movie_link': 'https://www.imdb.com/title/tt0099348/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '249',
+ 'rating': '8.00171216618887',
+ 'runtime_mins': 180,
+ 'title': 'Dances with Wolves',
+ 'votes': '260215',
+ 'year': '1990'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0083987/>
+{'awards_nominations': '21',
+ 'awards_wins': '35',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '52,767,889',
+ 'movie_id': 'tt0083987',
+ 'movie_link': 'https://www.imdb.com/title/tt0083987/',
+ 'origin': ['United Kingdom', 'India', 'United States', 'South Africa'],
+ 'rank': '245',
+ 'rating': '8.007179571386661',
+ 'runtime_mins': 191,
+ 'title': 'Gandhi',
+ 'votes': '228154',
+ 'year': '1982'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4016934/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4016934/>
+{'awards_nominations': '108',
+ 'awards_wins': '70',
+ 'genre': ['Drama', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '37,767,206',
+ 'movie_id': 'tt4016934',
+ 'movie_link': 'https://www.imdb.com/title/tt4016934/',
+ 'origin': ['South Korea'],
+ 'rank': '244',
+ 'rating': '8.008992320567398',
+ 'runtime_mins': 145,
+ 'title': 'The Handmaiden',
+ 'votes': '138778',
+ 'year': '2016'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0025316/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0059742/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0113247/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0079470/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0025316/>
+{'awards_nominations': '2',
+ 'awards_wins': '11',
+ 'genre': ['Comedy', 'Romance'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0025316',
+ 'movie_link': 'https://www.imdb.com/title/tt0025316/',
+ 'origin': ['United States'],
+ 'rank': '243',
+ 'rating': '8.013571040230172',
+ 'runtime_mins': 45,
+ 'title': 'It Happened One Night',
+ 'votes': '102338',
+ 'year': '1934'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0059742/>
+{'awards_nominations': '13',
+ 'awards_wins': '17',
+ 'genre': ['Biography', 'Drama', 'Family', 'Musical', 'Romance'],
+ 'gross_worldwide_usd': '159,428,329',
+ 'movie_id': 'tt0059742',
+ 'movie_link': 'https://www.imdb.com/title/tt0059742/',
+ 'origin': ['United States'],
+ 'rank': '242',
+ 'rating': '8.013685284757715',
+ 'runtime_mins': 172,
+ 'title': 'The Sound of Music',
+ 'votes': '226790',
+ 'year': '1965'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0113247/>
+{'awards_nominations': '15',
+ 'awards_wins': '8',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '412,914',
+ 'movie_id': 'tt0113247',
+ 'movie_link': 'https://www.imdb.com/title/tt0113247/',
+ 'origin': ['France', 'United States'],
+ 'rank': '240',
+ 'rating': '8.015646229993344',
+ 'runtime_mins': 38,
+ 'title': 'La Haine',
+ 'votes': '168419',
+ 'year': '1995'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0060827/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0476735/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0079470/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Comedy'],
+ 'gross_worldwide_usd': '20,745,728',
+ 'movie_id': 'tt0079470',
+ 'movie_link': 'https://www.imdb.com/title/tt0079470/',
+ 'origin': ['United Kingdom'],
+ 'rank': '241',
+ 'rating': '8.015261118463146',
+ 'runtime_mins': 34,
+ 'title': 'Life of Brian',
+ 'votes': '393076',
+ 'year': '1979'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0060827/>
+{'awards_nominations': '5',
+ 'awards_wins': '11',
+ 'genre': ['Drama', 'Thriller'],
+ 'gross_worldwide_usd': '90,556',
+ 'movie_id': 'tt0060827',
+ 'movie_link': 'https://www.imdb.com/title/tt0060827/',
+ 'origin': ['Sweden'],
+ 'rank': '239',
+ 'rating': '8.01599909174518',
+ 'runtime_mins': 23,
+ 'title': 'Persona',
+ 'votes': '115736',
+ 'year': '1966'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0476735/>
+{'awards_nominations': '7',
+ 'awards_wins': '14',
+ 'genre': ['Drama', 'Family'],
+ 'gross_worldwide_usd': '18,612,999',
+ 'movie_id': 'tt0476735',
+ 'movie_link': 'https://www.imdb.com/title/tt0476735/',
+ 'origin': ['Turkey'],
+ 'rank': '238',
+ 'rating': '8.016146184342567',
+ 'runtime_mins': 52,
+ 'title': 'My Father and My Son',
+ 'votes': '85638',
+ 'year': '2005'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0325980/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0053198/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0325980/>
+{'awards_nominations': '104',
+ 'awards_wins': '38',
+ 'genre': ['Action', 'Adventure', 'Fantasy'],
+ 'gross_worldwide_usd': '654,264,015',
+ 'movie_id': 'tt0325980',
+ 'movie_link': 'https://www.imdb.com/title/tt0325980/',
+ 'origin': ['United States'],
+ 'rank': '236',
+ 'rating': '8.016913612234763',
+ 'runtime_mins': 143,
+ 'title': 'Pirates of the Caribbean: The Curse of the Black Pearl',
+ 'votes': '1085801',
+ 'year': '2003'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0053198/>
+{'awards_nominations': '7',
+ 'awards_wins': '10',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '127,244',
+ 'movie_id': 'tt0053198',
+ 'movie_link': 'https://www.imdb.com/title/tt0053198/',
+ 'origin': ['France'],
+ 'rank': '237',
+ 'rating': '8.016321337791092',
+ 'runtime_mins': 39,
+ 'title': 'The 400 Blows',
+ 'votes': '115618',
+ 'year': '1959'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071411/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0245712/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0061512/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071411/>
+{'awards_nominations': '2',
+ 'awards_wins': '8',
+ 'genre': ['Adventure', 'Biography', 'Drama'],
+ 'gross_worldwide_usd': '14,480',
+ 'movie_id': 'tt0071411',
+ 'movie_link': 'https://www.imdb.com/title/tt0071411/',
+ 'origin': ['Soviet Union', 'Japan'],
+ 'rank': '235',
+ 'rating': '8.017966453185773',
+ 'runtime_mins': 142,
+ 'title': 'Dersu Uzala',
+ 'votes': '28317',
+ 'year': '1975'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0245712/>
+{'awards_nominations': '25',
+ 'awards_wins': '55',
+ 'genre': ['Drama', 'Thriller'],
+ 'gross_worldwide_usd': '20,908,467',
+ 'movie_id': 'tt0245712',
+ 'movie_link': 'https://www.imdb.com/title/tt0245712/',
+ 'origin': ['Mexico'],
+ 'rank': '234',
+ 'rating': '8.021386734427594',
+ 'runtime_mins': 154,
+ 'title': 'Amores perros',
+ 'votes': '237314',
+ 'year': '2000'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0061512/>
+{'awards_nominations': '10',
+ 'awards_wins': '4',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '67',
+ 'movie_id': 'tt0061512',
+ 'movie_link': 'https://www.imdb.com/title/tt0061512/',
+ 'origin': ['United States'],
+ 'rank': '233',
+ 'rating': '8.02158607849697',
+ 'runtime_mins': 127,
+ 'title': 'Cool Hand Luke',
+ 'votes': '174620',
+ 'year': '1967'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1028532/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0058946/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1028532/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Biography', 'Drama', 'Family'],
+ 'gross_worldwide_usd': '46,749,646',
+ 'movie_id': 'tt1028532',
+ 'movie_link': 'https://www.imdb.com/title/tt1028532/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '232',
+ 'rating': '8.02179132860839',
+ 'runtime_mins': 33,
+ 'title': "Hachi: A Dog's Tale",
+ 'votes': '277948',
+ 'year': '2009'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0058946/>
+{'awards_nominations': '9',
+ 'awards_wins': '9',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '962,002',
+ 'movie_id': 'tt0058946',
+ 'movie_link': 'https://www.imdb.com/title/tt0058946/',
+ 'origin': ['Italy', 'Algeria'],
+ 'rank': '230',
+ 'rating': '8.02302714618762',
+ 'runtime_mins': 120,
+ 'title': 'The Battle of Algiers',
+ 'votes': '59134',
+ 'year': '1966'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032976/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032551/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032976/>
+{'awards_nominations': '10',
+ 'awards_wins': '7',
+ 'genre': ['Drama', 'Film-Noir', 'Mystery', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '72,275',
+ 'movie_id': 'tt0032976',
+ 'movie_link': 'https://www.imdb.com/title/tt0032976/',
+ 'origin': ['United States'],
+ 'rank': '229',
+ 'rating': '8.023040300028168',
+ 'runtime_mins': 130,
+ 'title': 'Rebecca',
+ 'votes': '135187',
+ 'year': '1940'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032551/>
+{'awards_nominations': '5',
+ 'awards_wins': '10',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0032551',
+ 'movie_link': 'https://www.imdb.com/title/tt0032551/',
+ 'origin': ['United States'],
+ 'rank': '231',
+ 'rating': '8.022276957619317',
+ 'runtime_mins': 129,
+ 'title': 'The Grapes of Wrath',
+ 'votes': '91709',
+ 'year': '1940'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0035446/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0036868/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0381681/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0317705/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0035446/>
+{'awards_nominations': '2',
+ 'awards_wins': '2',
+ 'genre': ['Comedy', 'Romance', 'War'],
+ 'gross_worldwide_usd': '4,578,000',
+ 'movie_id': 'tt0035446',
+ 'movie_link': 'https://www.imdb.com/title/tt0035446/',
+ 'origin': ['United States'],
+ 'rank': '228',
+ 'rating': '8.024468771738967',
+ 'runtime_mins': 39,
+ 'title': 'To Be or Not to Be',
+ 'votes': '36079',
+ 'year': '1942'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0036868/>
+{'awards_nominations': '4',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'Romance', 'War'],
+ 'gross_worldwide_usd': '23,656,620',
+ 'movie_id': 'tt0036868',
+ 'movie_link': 'https://www.imdb.com/title/tt0036868/',
+ 'origin': ['United States'],
+ 'rank': '226',
+ 'rating': '8.025856875590504',
+ 'runtime_mins': 170,
+ 'title': 'The Best Years of Our Lives',
+ 'votes': '63174',
+ 'year': '1946'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0381681/>
+{'awards_nominations': '32',
+ 'awards_wins': '9',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '15,936,507',
+ 'movie_id': 'tt0381681',
+ 'movie_link': 'https://www.imdb.com/title/tt0381681/',
+ 'origin': ['United States', 'France'],
+ 'rank': '225',
+ 'rating': '8.027988572624599',
+ 'runtime_mins': 20,
+ 'title': 'Before Sunset',
+ 'votes': '257375',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0317705/>
+{'awards_nominations': '56',
+ 'awards_wins': '67',
+ 'genre': ['Animation', 'Action', 'Adventure', 'Family'],
+ 'gross_worldwide_usd': '631,607,053',
+ 'movie_id': 'tt0317705',
+ 'movie_link': 'https://www.imdb.com/title/tt0317705/',
+ 'origin': ['United States'],
+ 'rank': '227',
+ 'rating': '8.025174797204443',
+ 'runtime_mins': 55,
+ 'title': 'The Incredibles',
+ 'votes': '710906',
+ 'year': '2004'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0382932/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0070047/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0382932/>
+{'awards_nominations': '42',
+ 'awards_wins': '67',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '623,726,085',
+ 'movie_id': 'tt0382932',
+ 'movie_link': 'https://www.imdb.com/title/tt0382932/',
+ 'origin': ['United States'],
+ 'rank': '223',
+ 'rating': '8.03059370126014',
+ 'runtime_mins': 51,
+ 'title': 'Ratatouille',
+ 'votes': '704192',
+ 'year': '2007'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt3315342/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0070047/>
+{'awards_nominations': '17',
+ 'awards_wins': '16',
+ 'genre': ['Horror'],
+ 'gross_worldwide_usd': '441,306,145',
+ 'movie_id': 'tt0070047',
+ 'movie_link': 'https://www.imdb.com/title/tt0070047/',
+ 'origin': ['United States'],
+ 'rank': '224',
+ 'rating': '8.028670210403762',
+ 'runtime_mins': 122,
+ 'title': 'The Exorcist',
+ 'votes': '392520',
+ 'year': '1973'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0107048/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt3315342/>
+{'awards_nominations': '80',
+ 'awards_wins': '28',
+ 'genre': ['Action', 'Drama', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '619,179,950',
+ 'movie_id': 'tt3315342',
+ 'movie_link': 'https://www.imdb.com/title/tt3315342/',
+ 'origin': ['United States'],
+ 'rank': '221',
+ 'rating': '8.034762251558107',
+ 'runtime_mins': 137,
+ 'title': 'Logan',
+ 'votes': '730401',
+ 'year': '2017'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0107048/>
+{'awards_nominations': '17',
+ 'awards_wins': '7',
+ 'genre': ['Comedy', 'Drama', 'Fantasy', 'Romance'],
+ 'gross_worldwide_usd': '71,108,591',
+ 'movie_id': 'tt0107048',
+ 'movie_link': 'https://www.imdb.com/title/tt0107048/',
+ 'origin': ['United States'],
+ 'rank': '222',
+ 'rating': '8.032934452771876',
+ 'runtime_mins': 41,
+ 'title': 'Groundhog Day',
+ 'votes': '615101',
+ 'year': '1993'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0758758/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032138/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1895587/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0074958/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0758758/>
+{'awards_nominations': '106',
+ 'awards_wins': '23',
+ 'genre': ['Adventure', 'Biography', 'Drama'],
+ 'gross_worldwide_usd': '56,675,895',
+ 'movie_id': 'tt0758758',
+ 'movie_link': 'https://www.imdb.com/title/tt0758758/',
+ 'origin': ['United States'],
+ 'rank': '218',
+ 'rating': '8.03838136288208',
+ 'runtime_mins': 148,
+ 'title': 'Into the Wild',
+ 'votes': '612329',
+ 'year': '2007'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032138/>
+{'awards_nominations': '16',
+ 'awards_wins': '13',
+ 'genre': ['Adventure', 'Family', 'Fantasy', 'Musical'],
+ 'gross_worldwide_usd': '25,637,669',
+ 'movie_id': 'tt0032138',
+ 'movie_link': 'https://www.imdb.com/title/tt0032138/',
+ 'origin': ['United States'],
+ 'rank': '220',
+ 'rating': '8.03611446163347',
+ 'runtime_mins': 42,
+ 'title': 'The Wizard of Oz',
+ 'votes': '390310',
+ 'year': '1939'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1895587/>
+{'awards_nominations': '143',
+ 'awards_wins': '124',
+ 'genre': ['Biography', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '98,690,254',
+ 'movie_id': 'tt1895587',
+ 'movie_link': 'https://www.imdb.com/title/tt1895587/',
+ 'origin': ['United States'],
+ 'rank': '217',
+ 'rating': '8.039269236761161',
+ 'runtime_mins': 129,
+ 'title': 'Spotlight',
+ 'votes': '459675',
+ 'year': '2015'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0074958/>
+{'awards_nominations': '26',
+ 'awards_wins': '20',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '23,690,757',
+ 'movie_id': 'tt0074958',
+ 'movie_link': 'https://www.imdb.com/title/tt0074958/',
+ 'origin': ['United States'],
+ 'rank': '219',
+ 'rating': '8.037167147230322',
+ 'runtime_mins': 120,
+ 'title': 'Network',
+ 'votes': '157187',
+ 'year': '1976'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0088247/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1979320/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0088247/>
+{'awards_nominations': '6',
+ 'awards_wins': '8',
+ 'genre': ['Action', 'Sci-Fi'],
+ 'gross_worldwide_usd': '78,371,200',
+ 'movie_id': 'tt0088247',
+ 'movie_link': 'https://www.imdb.com/title/tt0088247/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '215',
+ 'rating': '8.041336153290077',
+ 'runtime_mins': 47,
+ 'title': 'The Terminator',
+ 'votes': '842601',
+ 'year': '1984'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1979320/>
+{'awards_nominations': '65',
+ 'awards_wins': '6',
+ 'genre': ['Action', 'Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '96,983,009',
+ 'movie_id': 'tt1979320',
+ 'movie_link': 'https://www.imdb.com/title/tt1979320/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '216',
+ 'rating': '8.039911217165908',
+ 'runtime_mins': 123,
+ 'title': 'Rush',
+ 'votes': '468912',
+ 'year': '2013'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1950186/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0092005/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1950186/>
+{'awards_nominations': '91',
+ 'awards_wins': '25',
+ 'genre': ['Action', 'Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '225,508,210',
+ 'movie_id': 'tt1950186',
+ 'movie_link': 'https://www.imdb.com/title/tt1950186/',
+ 'origin': ['United States'],
+ 'rank': '213',
+ 'rating': '8.045065311372715',
+ 'runtime_mins': 152,
+ 'title': 'Ford v Ferrari',
+ 'votes': '367450',
+ 'year': '2019'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0092005/>
+{'awards_nominations': '11',
+ 'awards_wins': '5',
+ 'genre': ['Adventure', 'Drama'],
+ 'gross_worldwide_usd': '52,287,414',
+ 'movie_id': 'tt0092005',
+ 'movie_link': 'https://www.imdb.com/title/tt0092005/',
+ 'origin': ['United States'],
+ 'rank': '214',
+ 'rating': '8.042479434124967',
+ 'runtime_mins': 29,
+ 'title': 'Stand by Me',
+ 'votes': '393617',
+ 'year': '1986'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0097165/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0091763/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0075148/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0046438/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0097165/>
+{'awards_nominations': '19',
+ 'awards_wins': '20',
+ 'genre': ['Comedy', 'Drama'],
+ 'gross_worldwide_usd': '235,860,116',
+ 'movie_id': 'tt0097165',
+ 'movie_link': 'https://www.imdb.com/title/tt0097165/',
+ 'origin': ['United States'],
+ 'rank': '210',
+ 'rating': '8.0517355651587',
+ 'runtime_mins': 128,
+ 'title': 'Dead Poets Society',
+ 'votes': '472498',
+ 'year': '1989'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0091763/>
+{'awards_nominations': '15',
+ 'awards_wins': '24',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '138,545,632',
+ 'movie_id': 'tt0091763',
+ 'movie_link': 'https://www.imdb.com/title/tt0091763/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '211',
+ 'rating': '8.047713395232565',
+ 'runtime_mins': 120,
+ 'title': 'Platoon',
+ 'votes': '406909',
+ 'year': '1986'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0395169/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0075148/>
+{'awards_nominations': '22',
+ 'awards_wins': '20',
+ 'genre': ['Drama', 'Sport'],
+ 'gross_worldwide_usd': '117,250,402',
+ 'movie_id': 'tt0075148',
+ 'movie_link': 'https://www.imdb.com/title/tt0075148/',
+ 'origin': ['United States'],
+ 'rank': '212',
+ 'rating': '8.047332087015382',
+ 'runtime_mins': 120,
+ 'title': 'Rocky',
+ 'votes': '560366',
+ 'year': '1976'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0046438/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '40,468',
+ 'movie_id': 'tt0046438',
+ 'movie_link': 'https://www.imdb.com/title/tt0046438/',
+ 'origin': ['Japan'],
+ 'rank': '209',
+ 'rating': '8.052127356023982',
+ 'runtime_mins': 136,
+ 'title': 'Tokyo Story',
+ 'votes': '60397',
+ 'year': '1953'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0048473/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0395169/>
+{'awards_nominations': '49',
+ 'awards_wins': '16',
+ 'genre': ['Biography', 'Drama', 'History', 'War'],
+ 'gross_worldwide_usd': '33,882,243',
+ 'movie_id': 'tt0395169',
+ 'movie_link': 'https://www.imdb.com/title/tt0395169/',
+ 'origin': ['United Kingdom', 'South Africa', 'Italy', 'United States'],
+ 'rank': '208',
+ 'rating': '8.053568064498307',
+ 'runtime_mins': 120,
+ 'title': 'Hotel Rwanda',
+ 'votes': '351213',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0048473/>
+{'awards_nominations': '2',
+ 'awards_wins': '11',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '135,342',
+ 'movie_id': 'tt0048473',
+ 'movie_link': 'https://www.imdb.com/title/tt0048473/',
+ 'origin': ['India'],
+ 'rank': '207',
+ 'rating': '8.055756385261425',
+ 'runtime_mins': 125,
+ 'title': 'Pather Panchali',
+ 'votes': '31586',
+ 'year': '1955'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0019254/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0019254/>
+{'awards_nominations': '2',
+ 'awards_wins': '5',
+ 'genre': ['Biography', 'Drama', 'History'],
+ 'gross_worldwide_usd': '21,877',
+ 'movie_id': 'tt0019254',
+ 'movie_link': 'https://www.imdb.com/title/tt0019254/',
+ 'origin': ['France'],
+ 'rank': '206',
+ 'rating': '8.056399679556362',
+ 'runtime_mins': 54,
+ 'title': 'The Passion of Joan of Arc',
+ 'votes': '53609',
+ 'year': '1928'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0073195/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0073195/>
+{'awards_nominations': '20',
+ 'awards_wins': '15',
+ 'genre': ['Adventure', 'Thriller'],
+ 'gross_worldwide_usd': '471,411,300',
+ 'movie_id': 'tt0073195',
+ 'movie_link': 'https://www.imdb.com/title/tt0073195/',
+ 'origin': ['United States'],
+ 'rank': '205',
+ 'rating': '8.057819780853519',
+ 'runtime_mins': 124,
+ 'title': 'Jaws',
+ 'votes': '583564',
+ 'year': '1975'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1392190/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0978762/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1392190/>
+{'awards_nominations': '233',
+ 'awards_wins': '247',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '375,709,470',
+ 'movie_id': 'tt1392190',
+ 'movie_link': 'https://www.imdb.com/title/tt1392190/',
+ 'origin': ['Australia', 'United States'],
+ 'rank': '202',
+ 'rating': '8.061375403965432',
+ 'runtime_mins': 120,
+ 'title': 'Mad Max: Fury Road',
+ 'votes': '969932',
+ 'year': '2015'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0892769/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0978762/>
+{'awards_nominations': '9',
+ 'awards_wins': '5',
+ 'genre': ['Animation', 'Comedy', 'Drama'],
+ 'gross_worldwide_usd': '1,740,429',
+ 'movie_id': 'tt0978762',
+ 'movie_link': 'https://www.imdb.com/title/tt0978762/',
+ 'origin': ['Australia'],
+ 'rank': '203',
+ 'rating': '8.060598964106587',
+ 'runtime_mins': 32,
+ 'title': 'Mary and Max',
+ 'votes': '175083',
+ 'year': '2009'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0892769/>
+{'awards_nominations': '63',
+ 'awards_wins': '25',
+ 'genre': ['Animation', 'Action', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '494,879,471',
+ 'movie_id': 'tt0892769',
+ 'movie_link': 'https://www.imdb.com/title/tt0892769/',
+ 'origin': ['United States'],
+ 'rank': '201',
+ 'rating': '8.062081138020886',
+ 'runtime_mins': 38,
+ 'title': 'How to Train Your Dragon',
+ 'votes': '720505',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4729430/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4729430/>
+{'awards_nominations': '26',
+ 'awards_wins': '11',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt4729430',
+ 'movie_link': 'https://www.imdb.com/title/tt4729430/',
+ 'origin': ['Spain', 'United Kingdom'],
+ 'rank': '198',
+ 'rating': '8.065824425740914',
+ 'runtime_mins': 36,
+ 'title': 'Klaus',
+ 'votes': '142118',
+ 'year': '2019'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt3011894/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt3011894/>
+{'awards_nominations': '58',
+ 'awards_wins': '49',
+ 'genre': ['Comedy', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '30,642,704',
+ 'movie_id': 'tt3011894',
+ 'movie_link': 'https://www.imdb.com/title/tt3011894/',
+ 'origin': ['Argentina', 'Spain', 'France', 'United Kingdom'],
+ 'rank': '199',
+ 'rating': '8.064878598585157',
+ 'runtime_mins': 122,
+ 'title': 'Wild Tales',
+ 'votes': '193882',
+ 'year': '2014'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0118715/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2119532/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0353969/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0118715/>
+{'awards_nominations': '18',
+ 'awards_wins': '5',
+ 'genre': ['Comedy', 'Crime'],
+ 'gross_worldwide_usd': '46,969,081',
+ 'movie_id': 'tt0118715',
+ 'movie_link': 'https://www.imdb.com/title/tt0118715/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '200',
+ 'rating': '8.063379142494465',
+ 'runtime_mins': 57,
+ 'title': 'The Big Lebowski',
+ 'votes': '790997',
+ 'year': '1998'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0198781/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2119532/>
+{'awards_nominations': '115',
+ 'awards_wins': '56',
+ 'genre': ['Biography', 'Drama', 'History', 'War'],
+ 'gross_worldwide_usd': '180,563,636',
+ 'movie_id': 'tt2119532',
+ 'movie_link': 'https://www.imdb.com/title/tt2119532/',
+ 'origin': ['Australia', 'United States'],
+ 'rank': '197',
+ 'rating': '8.06651702100678',
+ 'runtime_mins': 139,
+ 'title': 'Hacksaw Ridge',
+ 'votes': '502555',
+ 'year': '2016'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0353969/>
+{'awards_nominations': '5',
+ 'awards_wins': '33',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '1,166,717',
+ 'movie_id': 'tt0353969',
+ 'movie_link': 'https://www.imdb.com/title/tt0353969/',
+ 'origin': ['South Korea'],
+ 'rank': '195',
+ 'rating': '8.068024713572475',
+ 'runtime_mins': 132,
+ 'title': 'Memories of Murder',
+ 'votes': '173505',
+ 'year': '2003'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0050976/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0198781/>
+{'awards_nominations': '38',
+ 'awards_wins': '15',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '579,707,738',
+ 'movie_id': 'tt0198781',
+ 'movie_link': 'https://www.imdb.com/title/tt0198781/',
+ 'origin': ['United States'],
+ 'rank': '204',
+ 'rating': '8.05805333135406',
+ 'runtime_mins': 32,
+ 'title': 'Monsters, Inc.',
+ 'votes': '883867',
+ 'year': '2001'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt3170832/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0050976/>
+{'awards_nominations': '2',
+ 'awards_wins': '10',
+ 'genre': ['Drama', 'Fantasy'],
+ 'gross_worldwide_usd': '288,931',
+ 'movie_id': 'tt0050976',
+ 'movie_link': 'https://www.imdb.com/title/tt0050976/',
+ 'origin': ['Sweden'],
+ 'rank': '196',
+ 'rating': '8.066737043794841',
+ 'runtime_mins': 36,
+ 'title': 'The Seventh Seal',
+ 'votes': '181900',
+ 'year': '1957'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt3170832/>
+{'awards_nominations': '140',
+ 'awards_wins': '108',
+ 'genre': ['Drama', 'Thriller'],
+ 'gross_worldwide_usd': '35,401,758',
+ 'movie_id': 'tt3170832',
+ 'movie_link': 'https://www.imdb.com/title/tt3170832/',
+ 'origin': ['Ireland', 'Canada', 'United Kingdom', 'United States'],
+ 'rank': '194',
+ 'rating': '8.068500223151215',
+ 'runtime_mins': 58,
+ 'title': 'Room',
+ 'votes': '409579',
+ 'year': '2015'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0046268/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0046268/>
+{'awards_nominations': '',
+ 'awards_wins': '6',
+ 'genre': ['Adventure', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '1,098',
+ 'movie_id': 'tt0046268',
+ 'movie_link': 'https://www.imdb.com/title/tt0046268/',
+ 'origin': ['France', 'Italy'],
+ 'rank': '191',
+ 'rating': '8.070442725066178',
+ 'runtime_mins': 131,
+ 'title': 'The Wages of Fear',
+ 'votes': '60119',
+ 'year': '1953'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0031679/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0072684/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0031679/>
+{'awards_nominations': '16',
+ 'awards_wins': '6',
+ 'genre': ['Comedy', 'Drama'],
+ 'gross_worldwide_usd': '144,738',
+ 'movie_id': 'tt0031679',
+ 'movie_link': 'https://www.imdb.com/title/tt0031679/',
+ 'origin': ['United States'],
+ 'rank': '190',
+ 'rating': '8.071698596305113',
+ 'runtime_mins': 129,
+ 'title': 'Mr. Smith Goes to Washington',
+ 'votes': '114409',
+ 'year': '1939'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0072684/>
+{'awards_nominations': '15',
+ 'awards_wins': '19',
+ 'genre': ['Adventure', 'Drama', 'War'],
+ 'gross_worldwide_usd': '198,992',
+ 'movie_id': 'tt0072684',
+ 'movie_link': 'https://www.imdb.com/title/tt0072684/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '193',
+ 'rating': '8.0687049066248',
+ 'runtime_mins': 185,
+ 'title': 'Barry Lyndon',
+ 'votes': '164147',
+ 'year': '1975'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0015324/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0015324/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Action', 'Comedy', 'Romance'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0015324',
+ 'movie_link': 'https://www.imdb.com/title/tt0015324/',
+ 'origin': ['United States'],
+ 'rank': '192',
+ 'rating': '8.070131025809564',
+ 'runtime_mins': 45,
+ 'title': 'Sherlock Jr.',
+ 'votes': '48590',
+ 'year': '1924'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0107207/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0112471/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1201607/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0107207/>
+{'awards_nominations': '41',
+ 'awards_wins': '7',
+ 'genre': ['Biography', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '65,796,862',
+ 'movie_id': 'tt0107207',
+ 'movie_link': 'https://www.imdb.com/title/tt0107207/',
+ 'origin': ['Ireland', 'United Kingdom'],
+ 'rank': '188',
+ 'rating': '8.074699705739416',
+ 'runtime_mins': 133,
+ 'title': 'In the Name of the Father',
+ 'votes': '171721',
+ 'year': '1993'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0112471/>
+{'awards_nominations': '7',
+ 'awards_wins': '',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '5,987,386',
+ 'movie_id': 'tt0112471',
+ 'movie_link': 'https://www.imdb.com/title/tt0112471/',
+ 'origin': ['United States', 'Austria'],
+ 'rank': '186',
+ 'rating': '8.07600315392784',
+ 'runtime_mins': 41,
+ 'title': 'Before Sunrise',
+ 'votes': '298845',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1201607/>
+{'awards_nominations': '94',
+ 'awards_wins': '46',
+ 'genre': ['Adventure', 'Fantasy', 'Mystery'],
+ 'gross_worldwide_usd': '1,342,359,942',
+ 'movie_id': 'tt1201607',
+ 'movie_link': 'https://www.imdb.com/title/tt1201607/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '187',
+ 'rating': '8.075382653781347',
+ 'runtime_mins': 130,
+ 'title': 'Harry Potter and the Deathly Hallows: Part 2',
+ 'votes': '846710',
+ 'year': '2011'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0050986/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2278388/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0050986/>
+{'awards_nominations': '4',
+ 'awards_wins': '18',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '14,524',
+ 'movie_id': 'tt0050986',
+ 'movie_link': 'https://www.imdb.com/title/tt0050986/',
+ 'origin': ['Sweden'],
+ 'rank': '184',
+ 'rating': '8.077303124797565',
+ 'runtime_mins': 31,
+ 'title': 'Wild Strawberries',
+ 'votes': '105735',
+ 'year': '1957'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0077416/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2278388/>
+{'awards_nominations': '226',
+ 'awards_wins': '134',
+ 'genre': ['Adventure', 'Comedy', 'Crime'],
+ 'gross_worldwide_usd': '173,082,189',
+ 'movie_id': 'tt2278388',
+ 'movie_link': 'https://www.imdb.com/title/tt2278388/',
+ 'origin': ['United States', 'Germany'],
+ 'rank': '189',
+ 'rating': '8.071897688125713',
+ 'runtime_mins': 39,
+ 'title': 'The Grand Budapest Hotel',
+ 'votes': '781494',
+ 'year': '2014'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2267998/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0077416/>
+{'awards_nominations': '27',
+ 'awards_wins': '24',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '49,074,379',
+ 'movie_id': 'tt0077416',
+ 'movie_link': 'https://www.imdb.com/title/tt0077416/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '185',
+ 'rating': '8.07615566500107',
+ 'runtime_mins': 183,
+ 'title': 'The Deer Hunter',
+ 'votes': '333803',
+ 'year': '1978'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2267998/>
+{'awards_nominations': '188',
+ 'awards_wins': '64',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '369,330,363',
+ 'movie_id': 'tt2267998',
+ 'movie_link': 'https://www.imdb.com/title/tt2267998/',
+ 'origin': ['United States'],
+ 'rank': '183',
+ 'rating': '8.077485036284783',
+ 'runtime_mins': 149,
+ 'title': 'Gone Girl',
+ 'votes': '952096',
+ 'year': '2014'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2024544/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2024544/>
+{'awards_nominations': '337',
+ 'awards_wins': '242',
+ 'genre': ['Biography', 'Drama', 'History'],
+ 'gross_worldwide_usd': '187,733,202',
+ 'movie_id': 'tt2024544',
+ 'movie_link': 'https://www.imdb.com/title/tt2024544/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '182',
+ 'rating': '8.078064029720021',
+ 'runtime_mins': 134,
+ 'title': '12 Years a Slave',
+ 'votes': '686331',
+ 'year': '2013'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0017925/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0041959/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0017925/>
+{'awards_nominations': '',
+ 'awards_wins': '2',
+ 'genre': ['Action', 'Adventure', 'Comedy', 'Drama', 'War'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0017925',
+ 'movie_link': 'https://www.imdb.com/title/tt0017925/',
+ 'origin': ['United States'],
+ 'rank': '181',
+ 'rating': '8.078427383445792',
+ 'runtime_mins': 7,
+ 'title': 'The General',
+ 'votes': '89964',
+ 'year': '1926'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0052618/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0047296/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0041959/>
+{'awards_nominations': '4',
+ 'awards_wins': '5',
+ 'genre': ['Film-Noir', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '1,226,797',
+ 'movie_id': 'tt0041959',
+ 'movie_link': 'https://www.imdb.com/title/tt0041959/',
+ 'origin': ['United Kingdom'],
+ 'rank': '178',
+ 'rating': '8.083107824227358',
+ 'runtime_mins': 33,
+ 'title': 'The Third Man',
+ 'votes': '169541',
+ 'year': '1949'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0083658/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0118849/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0047296/>
+{'awards_nominations': '9',
+ 'awards_wins': '30',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt0047296',
+ 'movie_link': 'https://www.imdb.com/title/tt0047296/',
+ 'origin': ['United States'],
+ 'rank': '177',
+ 'rating': '8.085299519511704',
+ 'runtime_mins': 48,
+ 'title': 'On the Waterfront',
+ 'votes': '152858',
+ 'year': '1954'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0052618/>
+{'awards_nominations': '16',
+ 'awards_wins': '29',
+ 'genre': ['Adventure', 'Drama', 'History'],
+ 'gross_worldwide_usd': '74,437,720',
+ 'movie_id': 'tt0052618',
+ 'movie_link': 'https://www.imdb.com/title/tt0052618/',
+ 'origin': ['United States'],
+ 'rank': '180',
+ 'rating': '8.079028787777862',
+ 'runtime_mins': 212,
+ 'title': 'Ben-Hur',
+ 'votes': '235742',
+ 'year': '1959'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0264464/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0083658/>
+{'awards_nominations': '19',
+ 'awards_wins': '12',
+ 'genre': ['Action', 'Drama', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '41,722,424',
+ 'movie_id': 'tt0083658',
+ 'movie_link': 'https://www.imdb.com/title/tt0083658/',
+ 'origin': ['United States'],
+ 'rank': '175',
+ 'rating': '8.087321787578908',
+ 'runtime_mins': 57,
+ 'title': 'Blade Runner',
+ 'votes': '749399',
+ 'year': '1982'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0118849/>
+{'awards_nominations': '5',
+ 'awards_wins': '13',
+ 'genre': ['Drama', 'Family', 'Sport'],
+ 'gross_worldwide_usd': '933,933',
+ 'movie_id': 'tt0118849',
+ 'movie_link': 'https://www.imdb.com/title/tt0118849/',
+ 'origin': ['Iran'],
+ 'rank': '179',
+ 'rating': '8.081940214617426',
+ 'runtime_mins': 29,
+ 'title': 'Children of Heaven',
+ 'votes': '73579',
+ 'year': '1997'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0264464/>
+{'awards_nominations': '46',
+ 'awards_wins': '16',
+ 'genre': ['Biography', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '352,114,312',
+ 'movie_id': 'tt0264464',
+ 'movie_link': 'https://www.imdb.com/title/tt0264464/',
+ 'origin': ['United States', 'Canada'],
+ 'rank': '176',
+ 'rating': '8.085535696044595',
+ 'runtime_mins': 141,
+ 'title': 'Catch Me If You Can',
+ 'votes': '939697',
+ 'year': '2002'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0015864/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0015864/>
+{'awards_nominations': '3',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Comedy', 'Drama', 'Western'],
+ 'gross_worldwide_usd': '26,975',
+ 'movie_id': 'tt0015864',
+ 'movie_link': 'https://www.imdb.com/title/tt0015864/',
+ 'origin': ['United States'],
+ 'rank': '174',
+ 'rating': '8.08792286484329',
+ 'runtime_mins': 35,
+ 'title': 'The Gold Rush',
+ 'votes': '109783',
+ 'year': '1925'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1392214/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0405159/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0096283/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1392214/>
+{'awards_nominations': '38',
+ 'awards_wins': '10',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '122,126,687',
+ 'movie_id': 'tt1392214',
+ 'movie_link': 'https://www.imdb.com/title/tt1392214/',
+ 'origin': ['United States'],
+ 'rank': '172',
+ 'rating': '8.09385500690376',
+ 'runtime_mins': 153,
+ 'title': 'Prisoners',
+ 'votes': '680743',
+ 'year': '2013'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0405159/>
+{'awards_nominations': '86',
+ 'awards_wins': '67',
+ 'genre': ['Drama', 'Sport'],
+ 'gross_worldwide_usd': '216,763,646',
+ 'movie_id': 'tt0405159',
+ 'movie_link': 'https://www.imdb.com/title/tt0405159/',
+ 'origin': ['United States'],
+ 'rank': '173',
+ 'rating': '8.090220574437435',
+ 'runtime_mins': 132,
+ 'title': 'Million Dollar Baby',
+ 'votes': '675683',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0096283/>
+{'awards_nominations': '2',
+ 'awards_wins': '5',
+ 'genre': ['Animation', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '30,574,632',
+ 'movie_id': 'tt0096283',
+ 'movie_link': 'https://www.imdb.com/title/tt0096283/',
+ 'origin': ['Japan'],
+ 'rank': '171',
+ 'rating': '8.095699610080834',
+ 'runtime_mins': 26,
+ 'title': 'My Neighbor Totoro',
+ 'votes': '327799',
+ 'year': '1988'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1205489/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1205489/>
+{'awards_nominations': '22',
+ 'awards_wins': '21',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '269,958,228',
+ 'movie_id': 'tt1205489',
+ 'movie_link': 'https://www.imdb.com/title/tt1205489/',
+ 'origin': ['Germany', 'United States'],
+ 'rank': '168',
+ 'rating': '8.105841476696655',
+ 'runtime_mins': 56,
+ 'title': 'Gran Torino',
+ 'votes': '762039',
+ 'year': '2008'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0117951/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0116282/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1291584/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0117951/>
+{'awards_nominations': '35',
+ 'awards_wins': '23',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '16,767,475',
+ 'movie_id': 'tt0117951',
+ 'movie_link': 'https://www.imdb.com/title/tt0117951/',
+ 'origin': ['United Kingdom'],
+ 'rank': '167',
+ 'rating': '8.111760376507377',
+ 'runtime_mins': 33,
+ 'title': 'Trainspotting',
+ 'votes': '674235',
+ 'year': '1996'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt5027774/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0116282/>
+{'awards_nominations': '58',
+ 'awards_wins': '83',
+ 'genre': ['Crime', 'Thriller'],
+ 'gross_worldwide_usd': '60,611,975',
+ 'movie_id': 'tt0116282',
+ 'movie_link': 'https://www.imdb.com/title/tt0116282/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '170',
+ 'rating': '8.103596206531956',
+ 'runtime_mins': 38,
+ 'title': 'Fargo',
+ 'votes': '664235',
+ 'year': '1996'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1291584/>
+{'awards_nominations': '22',
+ 'awards_wins': '5',
+ 'genre': ['Action', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '23,308,615',
+ 'movie_id': 'tt1291584',
+ 'movie_link': 'https://www.imdb.com/title/tt1291584/',
+ 'origin': ['United States'],
+ 'rank': '169',
+ 'rating': '8.105500539790738',
+ 'runtime_mins': 140,
+ 'title': 'Warrior',
+ 'votes': '463677',
+ 'year': '2011'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt5027774/>
+{'awards_nominations': '235',
+ 'awards_wins': '133',
+ 'genre': ['Comedy', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '160,260,573',
+ 'movie_id': 'tt5027774',
+ 'movie_link': 'https://www.imdb.com/title/tt5027774/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '166',
+ 'rating': '8.111886259600864',
+ 'runtime_mins': 55,
+ 'title': 'Three Billboards Outside Ebbing, Missouri',
+ 'votes': '490445',
+ 'year': '2017'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0050212/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0050212/>
+{'awards_nominations': '8',
+ 'awards_wins': '30',
+ 'genre': ['Adventure', 'Drama', 'War'],
+ 'gross_worldwide_usd': '27,200,000',
+ 'movie_id': 'tt0050212',
+ 'movie_link': 'https://www.imdb.com/title/tt0050212/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '164',
+ 'rating': '8.11503262751865',
+ 'runtime_mins': 161,
+ 'title': 'The Bridge on the River Kwai',
+ 'votes': '217341',
+ 'year': '1957'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0084787/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0046912/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0084787/>
+{'awards_nominations': '3',
+ 'awards_wins': '',
+ 'genre': ['Horror', 'Mystery', 'Sci-Fi'],
+ 'gross_worldwide_usd': '19,632,053',
+ 'movie_id': 'tt0084787',
+ 'movie_link': 'https://www.imdb.com/title/tt0084787/',
+ 'origin': ['United States'],
+ 'rank': '161',
+ 'rating': '8.123777975995605',
+ 'runtime_mins': 49,
+ 'title': 'The Thing',
+ 'votes': '409771',
+ 'year': '1982'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0046912/>
+{'awards_nominations': '3',
+ 'awards_wins': '5',
+ 'genre': ['Crime', 'Thriller'],
+ 'gross_worldwide_usd': '31,207',
+ 'movie_id': 'tt0046912',
+ 'movie_link': 'https://www.imdb.com/title/tt0046912/',
+ 'origin': ['United States'],
+ 'rank': '162',
+ 'rating': '8.119107638064625',
+ 'runtime_mins': 45,
+ 'title': 'Dial M for Murder',
+ 'votes': '172559',
+ 'year': '1954'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1305806/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120735/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0347149/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0434409/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2096673/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1305806/>
+{'awards_nominations': '43',
+ 'awards_wins': '53',
+ 'genre': ['Drama', 'Mystery', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '35,079,650',
+ 'movie_id': 'tt1305806',
+ 'movie_link': 'https://www.imdb.com/title/tt1305806/',
+ 'origin': ['Argentina', 'Spain'],
+ 'rank': '163',
+ 'rating': '8.118456924107464',
+ 'runtime_mins': 129,
+ 'title': 'The Secret in Their Eyes',
+ 'votes': '206545',
+ 'year': '2009'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120735/>
+{'awards_nominations': '9',
+ 'awards_wins': '13',
+ 'genre': ['Action', 'Comedy', 'Crime'],
+ 'gross_worldwide_usd': '3,753,929',
+ 'movie_id': 'tt0120735',
+ 'movie_link': 'https://www.imdb.com/title/tt0120735/',
+ 'origin': ['United Kingdom'],
+ 'rank': '160',
+ 'rating': '8.123963528271073',
+ 'runtime_mins': 47,
+ 'title': 'Lock, Stock and Two Smoking Barrels',
+ 'votes': '571375',
+ 'year': '1998'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0347149/>
+{'awards_nominations': '20',
+ 'awards_wins': '14',
+ 'genre': ['Animation', 'Adventure', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '236,323,601',
+ 'movie_id': 'tt0347149',
+ 'movie_link': 'https://www.imdb.com/title/tt0347149/',
+ 'origin': ['Japan'],
+ 'rank': '165',
+ 'rating': '8.114161764655751',
+ 'runtime_mins': 59,
+ 'title': "Howl's Moving Castle",
+ 'votes': '379722',
+ 'year': '2004'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0434409/>
+{'awards_nominations': '29',
+ 'awards_wins': '7',
+ 'genre': ['Action', 'Drama', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '132,511,035',
+ 'movie_id': 'tt0434409',
+ 'movie_link': 'https://www.imdb.com/title/tt0434409/',
+ 'origin': ['United States', 'United Kingdom', 'Germany'],
+ 'rank': '158',
+ 'rating': '8.126576106520101',
+ 'runtime_mins': 132,
+ 'title': 'V for Vendetta',
+ 'votes': '1099539',
+ 'year': '2005'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2096673/>
+{'awards_nominations': '116',
+ 'awards_wins': '101',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Drama', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '858,848,019',
+ 'movie_id': 'tt2096673',
+ 'movie_link': 'https://www.imdb.com/title/tt2096673/',
+ 'origin': ['United States'],
+ 'rank': '159',
+ 'rating': '8.12508293548514',
+ 'runtime_mins': 35,
+ 'title': 'Inside Out',
+ 'votes': '688402',
+ 'year': '2015'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0031381/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071315/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0031381/>
+{'awards_nominations': '12',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'History', 'Romance', 'War'],
+ 'gross_worldwide_usd': '402,382,193',
+ 'movie_id': 'tt0031381',
+ 'movie_link': 'https://www.imdb.com/title/tt0031381/',
+ 'origin': ['United States'],
+ 'rank': '157',
+ 'rating': '8.127310933730996',
+ 'runtime_mins': 238,
+ 'title': 'Gone with the Wind',
+ 'votes': '310393',
+ 'year': '1939'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071315/>
+{'awards_nominations': '24',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '29,225,935',
+ 'movie_id': 'tt0071315',
+ 'movie_link': 'https://www.imdb.com/title/tt0071315/',
+ 'origin': ['United States'],
+ 'rank': '156',
+ 'rating': '8.129250674594552',
+ 'runtime_mins': 130,
+ 'title': 'Chinatown',
+ 'votes': '319902',
+ 'year': '1974'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0080678/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0477348/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0266543/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0081398/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0266697/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0080678/>
+{'awards_nominations': '22',
+ 'awards_wins': '10',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '26,023,860',
+ 'movie_id': 'tt0080678',
+ 'movie_link': 'https://www.imdb.com/title/tt0080678/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '153',
+ 'rating': '8.131481586623647',
+ 'runtime_mins': 124,
+ 'title': 'The Elephant Man',
+ 'votes': '237102',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0477348/>
+{'awards_nominations': '140',
+ 'awards_wins': '163',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '171,627,166',
+ 'movie_id': 'tt0477348',
+ 'movie_link': 'https://www.imdb.com/title/tt0477348/',
+ 'origin': ['United States'],
+ 'rank': '152',
+ 'rating': '8.134923775883339',
+ 'runtime_mins': 122,
+ 'title': 'No Country for Old Men',
+ 'votes': '942262',
+ 'year': '2007'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0266543/>
+{'awards_nominations': '63',
+ 'awards_wins': '48',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family'],
+ 'gross_worldwide_usd': '940,352,645',
+ 'movie_id': 'tt0266543',
+ 'movie_link': 'https://www.imdb.com/title/tt0266543/',
+ 'origin': ['United States'],
+ 'rank': '154',
+ 'rating': '8.131159102460545',
+ 'runtime_mins': 40,
+ 'title': 'Finding Nemo',
+ 'votes': '1017817',
+ 'year': '2003'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0081398/>
+{'awards_nominations': '28',
+ 'awards_wins': '24',
+ 'genre': ['Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '23,402,427',
+ 'movie_id': 'tt0081398',
+ 'movie_link': 'https://www.imdb.com/title/tt0081398/',
+ 'origin': ['United States'],
+ 'rank': '155',
+ 'rating': '8.130513960454497',
+ 'runtime_mins': 129,
+ 'title': 'Raging Bull',
+ 'votes': '346311',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0266697/>
+{'awards_nominations': '104',
+ 'awards_wins': '29',
+ 'genre': ['Action', 'Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '180,906,076',
+ 'movie_id': 'tt0266697',
+ 'movie_link': 'https://www.imdb.com/title/tt0266697/',
+ 'origin': ['United States'],
+ 'rank': '150',
+ 'rating': '8.137210885896343',
+ 'runtime_mins': 51,
+ 'title': 'Kill Bill: Vol. 1',
+ 'votes': '1084714',
+ 'year': '2003'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0107290/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0107290/>
+{'awards_nominations': '27',
+ 'awards_wins': '44',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '1,099,428,303',
+ 'movie_id': 'tt0107290',
+ 'movie_link': 'https://www.imdb.com/title/tt0107290/',
+ 'origin': ['United States'],
+ 'rank': '151',
+ 'rating': '8.136954694121915',
+ 'runtime_mins': 127,
+ 'title': 'Jurassic Park',
+ 'votes': '946311',
+ 'year': '1993'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0057115/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1130884/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0057115/>
+{'awards_nominations': '11',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Drama', 'History', 'Thriller', 'War'],
+ 'gross_worldwide_usd': '228,178',
+ 'movie_id': 'tt0057115',
+ 'movie_link': 'https://www.imdb.com/title/tt0057115/',
+ 'origin': ['United States'],
+ 'rank': '148',
+ 'rating': '8.142601516864099',
+ 'runtime_mins': 172,
+ 'title': 'The Great Escape',
+ 'votes': '240851',
+ 'year': '1963'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1130884/>
+{'awards_nominations': '66',
+ 'awards_wins': '11',
+ 'genre': ['Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '294,805,697',
+ 'movie_id': 'tt1130884',
+ 'movie_link': 'https://www.imdb.com/title/tt1130884/',
+ 'origin': ['United States'],
+ 'rank': '149',
+ 'rating': '8.141938579948139',
+ 'runtime_mins': 138,
+ 'title': 'Shutter Island',
+ 'votes': '1259175',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0040897/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0042876/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120382/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0040897/>
+{'awards_nominations': '8',
+ 'awards_wins': '16',
+ 'genre': ['Adventure', 'Drama', 'Western'],
+ 'gross_worldwide_usd': '5,014,000',
+ 'movie_id': 'tt0040897',
+ 'movie_link': 'https://www.imdb.com/title/tt0040897/',
+ 'origin': ['United States'],
+ 'rank': '146',
+ 'rating': '8.147843838309106',
+ 'runtime_mins': 126,
+ 'title': 'The Treasure of the Sierra Madre',
+ 'votes': '123192',
+ 'year': '1948'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0042876/>
+{'awards_nominations': '5',
+ 'awards_wins': '9',
+ 'genre': ['Crime', 'Drama', 'Mystery'],
+ 'gross_worldwide_usd': '46,808',
+ 'movie_id': 'tt0042876',
+ 'movie_link': 'https://www.imdb.com/title/tt0042876/',
+ 'origin': ['Japan'],
+ 'rank': '147',
+ 'rating': '8.14355687606251',
+ 'runtime_mins': 28,
+ 'title': 'Rashomon',
+ 'votes': '165599',
+ 'year': '1950'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120382/>
+{'awards_nominations': '69',
+ 'awards_wins': '40',
+ 'genre': ['Comedy', 'Drama'],
+ 'gross_worldwide_usd': '264,118,201',
+ 'movie_id': 'tt0120382',
+ 'movie_link': 'https://www.imdb.com/title/tt0120382/',
+ 'origin': ['United States'],
+ 'rank': '144',
+ 'rating': '8.150594978568474',
+ 'runtime_mins': 43,
+ 'title': 'The Truman Show',
+ 'votes': '1037633',
+ 'year': '1998'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0055630/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0055630/>
+{'awards_nominations': '2',
+ 'awards_wins': '4',
+ 'genre': ['Action', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '46,808',
+ 'movie_id': 'tt0055630',
+ 'movie_link': 'https://www.imdb.com/title/tt0055630/',
+ 'origin': ['Japan'],
+ 'rank': '145',
+ 'rating': '8.149291469983174',
+ 'runtime_mins': 50,
+ 'title': 'Yojimbo',
+ 'votes': '120936',
+ 'year': '1961'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0268978/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071853/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0167404/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0469494/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0268978/>
+{'awards_nominations': '69',
+ 'awards_wins': '37',
+ 'genre': ['Biography', 'Drama'],
+ 'gross_worldwide_usd': '316,791,257',
+ 'movie_id': 'tt0268978',
+ 'movie_link': 'https://www.imdb.com/title/tt0268978/',
+ 'origin': ['United States'],
+ 'rank': '142',
+ 'rating': '8.153307030889655',
+ 'runtime_mins': 135,
+ 'title': 'A Beautiful Mind',
+ 'votes': '911173',
+ 'year': '2001'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071853/>
+{'awards_nominations': '3',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Comedy', 'Fantasy'],
+ 'gross_worldwide_usd': '1,940,906',
+ 'movie_id': 'tt0071853',
+ 'movie_link': 'https://www.imdb.com/title/tt0071853/',
+ 'origin': ['United Kingdom'],
+ 'rank': '143',
+ 'rating': '8.15325228993814',
+ 'runtime_mins': 31,
+ 'title': 'Monty Python and the Holy Grail',
+ 'votes': '531767',
+ 'year': '1975'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0167404/>
+{'awards_nominations': '56',
+ 'awards_wins': '37',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '672,806,432',
+ 'movie_id': 'tt0167404',
+ 'movie_link': 'https://www.imdb.com/title/tt0167404/',
+ 'origin': ['United States'],
+ 'rank': '141',
+ 'rating': '8.153614205604045',
+ 'runtime_mins': 47,
+ 'title': 'The Sixth Sense',
+ 'votes': '969533',
+ 'year': '1999'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0469494/>
+{'awards_nominations': '137',
+ 'awards_wins': '116',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '76,182,388',
+ 'movie_id': 'tt0469494',
+ 'movie_link': 'https://www.imdb.com/title/tt0469494/',
+ 'origin': ['United States'],
+ 'rank': '140',
+ 'rating': '8.154315975103941',
+ 'runtime_mins': 158,
+ 'title': 'There Will Be Blood',
+ 'votes': '570165',
+ 'year': '2007'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0457430/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0089881/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0457430/>
+{'awards_nominations': '115',
+ 'awards_wins': '109',
+ 'genre': ['Drama', 'Fantasy', 'War'],
+ 'gross_worldwide_usd': '83,862,032',
+ 'movie_id': 'tt0457430',
+ 'movie_link': 'https://www.imdb.com/title/tt0457430/',
+ 'origin': ['Mexico', 'Spain'],
+ 'rank': '137',
+ 'rating': '8.163904414246556',
+ 'runtime_mins': 58,
+ 'title': "Pan's Labyrinth",
+ 'votes': '656579',
+ 'year': '2006'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0112641/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0089881/>
+{'awards_nominations': '23',
+ 'awards_wins': '30',
+ 'genre': ['Action', 'Drama', 'War'],
+ 'gross_worldwide_usd': '4,164,283',
+ 'movie_id': 'tt0089881',
+ 'movie_link': 'https://www.imdb.com/title/tt0089881/',
+ 'origin': ['Japan', 'France'],
+ 'rank': '139',
+ 'rating': '8.163317873702878',
+ 'runtime_mins': 162,
+ 'title': 'Ran',
+ 'votes': '123415',
+ 'year': '1985'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0112641/>
+{'awards_nominations': '11',
+ 'awards_wins': '4',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '116,112,375',
+ 'movie_id': 'tt0112641',
+ 'movie_link': 'https://www.imdb.com/title/tt0112641/',
+ 'origin': ['United States', 'France'],
+ 'rank': '138',
+ 'rating': '8.163541514476364',
+ 'runtime_mins': 178,
+ 'title': 'Casino',
+ 'votes': '506318',
+ 'year': '1995'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0993846/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0055031/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0993846/>
+{'awards_nominations': '179',
+ 'awards_wins': '37',
+ 'genre': ['Biography', 'Comedy', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '392,000,694',
+ 'movie_id': 'tt0993846',
+ 'movie_link': 'https://www.imdb.com/title/tt0993846/',
+ 'origin': ['United States'],
+ 'rank': '134',
+ 'rating': '8.170864859598213',
+ 'runtime_mins': 180,
+ 'title': 'The Wolf of Wall Street',
+ 'votes': '1342471',
+ 'year': '2013'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0055031/>
+{'awards_nominations': '25',
+ 'awards_wins': '16',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '12,180',
+ 'movie_id': 'tt0055031',
+ 'movie_link': 'https://www.imdb.com/title/tt0055031/',
+ 'origin': ['United States'],
+ 'rank': '135',
+ 'rating': '8.168201499179695',
+ 'runtime_mins': 179,
+ 'title': 'Judgment at Nuremberg',
+ 'votes': '76351',
+ 'year': '1961'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt6966692/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0012349/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0105695/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt6966692/>
+{'awards_nominations': '124',
+ 'awards_wins': '59',
+ 'genre': ['Biography', 'Comedy', 'Drama', 'Music'],
+ 'gross_worldwide_usd': '321,752,656',
+ 'movie_id': 'tt6966692',
+ 'movie_link': 'https://www.imdb.com/title/tt6966692/',
+ 'origin': ['United States', 'China'],
+ 'rank': '133',
+ 'rating': '8.174268195889955',
+ 'runtime_mins': 130,
+ 'title': 'Green Book',
+ 'votes': '464585',
+ 'year': '2018'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0012349/>
+{'awards_nominations': '',
+ 'awards_wins': '2',
+ 'genre': ['Comedy', 'Drama', 'Family'],
+ 'gross_worldwide_usd': '41,960',
+ 'movie_id': 'tt0012349',
+ 'movie_link': 'https://www.imdb.com/title/tt0012349/',
+ 'origin': ['United States'],
+ 'rank': '129',
+ 'rating': '8.194942201781764',
+ 'runtime_mins': 8,
+ 'title': 'The Kid',
+ 'votes': '124599',
+ 'year': '1921'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0042192/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0105695/>
+{'awards_nominations': '47',
+ 'awards_wins': '50',
+ 'genre': ['Drama', 'Western'],
+ 'gross_worldwide_usd': '159,167,799',
+ 'movie_id': 'tt0105695',
+ 'movie_link': 'https://www.imdb.com/title/tt0105695/',
+ 'origin': ['United States'],
+ 'rank': '136',
+ 'rating': '8.165103550767746',
+ 'runtime_mins': 130,
+ 'title': 'Unforgiven',
+ 'votes': '404267',
+ 'year': '1992'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0042192/>
+{'awards_nominations': '20',
+ 'awards_wins': '26',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '151,052',
+ 'movie_id': 'tt0042192',
+ 'movie_link': 'https://www.imdb.com/title/tt0042192/',
+ 'origin': ['United States'],
+ 'rank': '132',
+ 'rating': '8.180211635786947',
+ 'runtime_mins': 138,
+ 'title': 'All About Eve',
+ 'votes': '129669',
+ 'year': '1950'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0053291/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0053291/>
+{'awards_nominations': '15',
+ 'awards_wins': '15',
+ 'genre': ['Comedy', 'Music', 'Romance'],
+ 'gross_worldwide_usd': '195,088',
+ 'movie_id': 'tt0053291',
+ 'movie_link': 'https://www.imdb.com/title/tt0053291/',
+ 'origin': ['United States'],
+ 'rank': '130',
+ 'rating': '8.191726962750337',
+ 'runtime_mins': 120,
+ 'title': 'Some Like It Hot',
+ 'votes': '262346',
+ 'year': '1959'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0363163/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt10272386/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0059578/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0363163/>
+{'awards_nominations': '34',
+ 'awards_wins': '22',
+ 'genre': ['Biography', 'Drama', 'History', 'War'],
+ 'gross_worldwide_usd': '92,181,574',
+ 'movie_id': 'tt0363163',
+ 'movie_link': 'https://www.imdb.com/title/tt0363163/',
+ 'origin': ['Germany', 'Austria', 'Italy'],
+ 'rank': '125',
+ 'rating': '8.204744515701744',
+ 'runtime_mins': 156,
+ 'title': 'Downfall',
+ 'votes': '350400',
+ 'year': '2004'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt8579674/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0986264/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0059578/>
+{'awards_nominations': '2',
+ 'awards_wins': '',
+ 'genre': ['Western'],
+ 'gross_worldwide_usd': '15,000,000',
+ 'movie_id': 'tt0059578',
+ 'movie_link': 'https://www.imdb.com/title/tt0059578/',
+ 'origin': ['Italy', 'Spain', 'West Germany'],
+ 'rank': '126',
+ 'rating': '8.203825380079376',
+ 'runtime_mins': 132,
+ 'title': 'For a Few Dollars More',
+ 'votes': '251610',
+ 'year': '1965'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt10272386/>
+{'awards_nominations': '157',
+ 'awards_wins': '35',
+ 'genre': ['Drama', 'Mystery'],
+ 'gross_worldwide_usd': '24,517,755',
+ 'movie_id': 'tt10272386',
+ 'movie_link': 'https://www.imdb.com/title/tt10272386/',
+ 'origin': ['United Kingdom', 'France', 'United States'],
+ 'rank': '131',
+ 'rating': '8.184370917805941',
+ 'runtime_mins': 37,
+ 'title': 'The Father',
+ 'votes': '135715',
+ 'year': '2020'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt8579674/>
+{'awards_nominations': '206',
+ 'awards_wins': '134',
+ 'genre': ['Action', 'Drama', 'War'],
+ 'gross_worldwide_usd': '384,919,389',
+ 'movie_id': 'tt8579674',
+ 'movie_link': 'https://www.imdb.com/title/tt8579674/',
+ 'origin': ['United Kingdom', 'United States', 'India', 'Spain'],
+ 'rank': '123',
+ 'rating': '8.21227815972078',
+ 'runtime_mins': 59,
+ 'title': '1917',
+ 'votes': '550776',
+ 'year': '2019'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0372784/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0986264/>
+{'awards_nominations': '15',
+ 'awards_wins': '24',
+ 'genre': ['Drama', 'Family'],
+ 'gross_worldwide_usd': '21,897,373',
+ 'movie_id': 'tt0986264',
+ 'movie_link': 'https://www.imdb.com/title/tt0986264/',
+ 'origin': ['India'],
+ 'rank': '124',
+ 'rating': '8.20649243425792',
+ 'runtime_mins': 165,
+ 'title': 'Like Stars on Earth',
+ 'votes': '188658',
+ 'year': '2007'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0372784/>
+{'awards_nominations': '79',
+ 'awards_wins': '13',
+ 'genre': ['Action', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '373,672,993',
+ 'movie_id': 'tt0372784',
+ 'movie_link': 'https://www.imdb.com/title/tt0372784/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '127',
+ 'rating': '8.202657494287445',
+ 'runtime_mins': 140,
+ 'title': 'Batman Begins',
+ 'votes': '1428176',
+ 'year': '2005'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt5074352/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt5074352/>
+{'awards_nominations': '19',
+ 'awards_wins': '29',
+ 'genre': ['Action', 'Biography', 'Drama', 'Sport'],
+ 'gross_worldwide_usd': '303,723,636',
+ 'movie_id': 'tt5074352',
+ 'movie_link': 'https://www.imdb.com/title/tt5074352/',
+ 'origin': ['India', 'United States'],
+ 'rank': '128',
+ 'rating': '8.19810198725013',
+ 'runtime_mins': 161,
+ 'title': 'Dangal',
+ 'votes': '183002',
+ 'year': '2016'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0097576/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0040522/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1255953/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0097576/>
+{'awards_nominations': '22',
+ 'awards_wins': '8',
+ 'genre': ['Action', 'Adventure'],
+ 'gross_worldwide_usd': '474,171,806',
+ 'movie_id': 'tt0097576',
+ 'movie_link': 'https://www.imdb.com/title/tt0097576/',
+ 'origin': ['United States'],
+ 'rank': '121',
+ 'rating': '8.218417576351992',
+ 'runtime_mins': 127,
+ 'title': 'Indiana Jones and the Last Crusade',
+ 'votes': '738619',
+ 'year': '1989'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0040522/>
+{'awards_nominations': '3',
+ 'awards_wins': '20',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '436,655',
+ 'movie_id': 'tt0040522',
+ 'movie_link': 'https://www.imdb.com/title/tt0040522/',
+ 'origin': ['Italy'],
+ 'rank': '122',
+ 'rating': '8.217739568512219',
+ 'runtime_mins': 29,
+ 'title': 'Bicycle Thieves',
+ 'votes': '160838',
+ 'year': '1948'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0095016/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1255953/>
+{'awards_nominations': '18',
+ 'awards_wins': '40',
+ 'genre': ['Drama', 'Mystery', 'War'],
+ 'gross_worldwide_usd': '6,788,659',
+ 'movie_id': 'tt1255953',
+ 'movie_link': 'https://www.imdb.com/title/tt1255953/',
+ 'origin': ['Canada', 'France'],
+ 'rank': '120',
+ 'rating': '8.219000736903782',
+ 'runtime_mins': 131,
+ 'title': 'Incendies',
+ 'votes': '172242',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0208092/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0017136/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0095016/>
+{'awards_nominations': '6',
+ 'awards_wins': '8',
+ 'genre': ['Action', 'Thriller'],
+ 'gross_worldwide_usd': '141,603,197',
+ 'movie_id': 'tt0095016',
+ 'movie_link': 'https://www.imdb.com/title/tt0095016/',
+ 'origin': ['United States'],
+ 'rank': '119',
+ 'rating': '8.220330922817329',
+ 'runtime_mins': 132,
+ 'title': 'Die Hard',
+ 'votes': '857653',
+ 'year': '1988'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0208092/>
+{'awards_nominations': '7',
+ 'awards_wins': '4',
+ 'genre': ['Comedy', 'Crime'],
+ 'gross_worldwide_usd': '83,557,872',
+ 'movie_id': 'tt0208092',
+ 'movie_link': 'https://www.imdb.com/title/tt0208092/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '117',
+ 'rating': '8.220809881628151',
+ 'runtime_mins': 42,
+ 'title': 'Snatch',
+ 'votes': '837134',
+ 'year': '2000'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0017136/>
+{'awards_nominations': '7',
+ 'awards_wins': '6',
+ 'genre': ['Drama', 'Sci-Fi'],
+ 'gross_worldwide_usd': '1,349,711',
+ 'movie_id': 'tt0017136',
+ 'movie_link': 'https://www.imdb.com/title/tt0017136/',
+ 'origin': ['Germany'],
+ 'rank': '116',
+ 'rating': '8.221248208555794',
+ 'runtime_mins': 153,
+ 'title': 'Metropolis',
+ 'votes': '171623',
+ 'year': '1927'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0113277/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1832382/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0113277/>
+{'awards_nominations': '14',
+ 'awards_wins': '',
+ 'genre': ['Action', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '187,436,818',
+ 'movie_id': 'tt0113277',
+ 'movie_link': 'https://www.imdb.com/title/tt0113277/',
+ 'origin': ['United States'],
+ 'rank': '115',
+ 'rating': '8.222860069337505',
+ 'runtime_mins': 170,
+ 'title': 'Heat',
+ 'votes': '634355',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1832382/>
+{'awards_nominations': '50',
+ 'awards_wins': '89',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '22,926,076',
+ 'movie_id': 'tt1832382',
+ 'movie_link': 'https://www.imdb.com/title/tt1832382/',
+ 'origin': ['Iran', 'France', 'Australia'],
+ 'rank': '118',
+ 'rating': '8.220601272230429',
+ 'runtime_mins': 123,
+ 'title': 'A Separation',
+ 'votes': '241463',
+ 'year': '2011'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0119488/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt8503618/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0070735/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0119488/>
+{'awards_nominations': '86',
+ 'awards_wins': '92',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '126,216,940',
+ 'movie_id': 'tt0119488',
+ 'movie_link': 'https://www.imdb.com/title/tt0119488/',
+ 'origin': ['United States'],
+ 'rank': '112',
+ 'rating': '8.225622849488362',
+ 'runtime_mins': 138,
+ 'title': 'L.A. Confidential',
+ 'votes': '571898',
+ 'year': '1997'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt8503618/>
+{'awards_nominations': '46',
+ 'awards_wins': '18',
+ 'genre': ['Biography', 'Drama', 'History', 'Musical'],
+ 'gross_worldwide_usd': 0,
+ 'movie_id': 'tt8503618',
+ 'movie_link': 'https://www.imdb.com/title/tt8503618/',
+ 'origin': ['United States'],
+ 'rank': '113',
+ 'rating': '8.225250864839479',
+ 'runtime_mins': 160,
+ 'title': 'Hamilton',
+ 'votes': '87350',
+ 'year': '2020'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1049413/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0070735/>
+{'awards_nominations': '6',
+ 'awards_wins': '18',
+ 'genre': ['Comedy', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '156,000,000',
+ 'movie_id': 'tt0070735',
+ 'movie_link': 'https://www.imdb.com/title/tt0070735/',
+ 'origin': ['United States'],
+ 'rank': '111',
+ 'rating': '8.22899761115254',
+ 'runtime_mins': 129,
+ 'title': 'The Sting',
+ 'votes': '257682',
+ 'year': '1973'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1049413/>
+{'awards_nominations': '87',
+ 'awards_wins': '79',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Drama', 'Family'],
+ 'gross_worldwide_usd': '735,099,102',
+ 'movie_id': 'tt1049413',
+ 'movie_link': 'https://www.imdb.com/title/tt1049413/',
+ 'origin': ['United States'],
+ 'rank': '114',
+ 'rating': '8.224174854949863',
+ 'runtime_mins': 36,
+ 'title': 'Up',
+ 'votes': '1014576',
+ 'year': '2009'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0056592/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0075314/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0056592/>
+{'awards_nominations': '16',
+ 'awards_wins': '14',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '599,146',
+ 'movie_id': 'tt0056592',
+ 'movie_link': 'https://www.imdb.com/title/tt0056592/',
+ 'origin': ['United States'],
+ 'rank': '108',
+ 'rating': '8.229282277102254',
+ 'runtime_mins': 129,
+ 'title': 'To Kill a Mockingbird',
+ 'votes': '311908',
+ 'year': '1962'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt10872600/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0075314/>
+{'awards_nominations': '20',
+ 'awards_wins': '22',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '28,570,902',
+ 'movie_id': 'tt0075314',
+ 'movie_link': 'https://www.imdb.com/title/tt0075314/',
+ 'origin': ['United States'],
+ 'rank': '110',
+ 'rating': '8.229137125674267',
+ 'runtime_mins': 54,
+ 'title': 'Taxi Driver',
+ 'votes': '797534',
+ 'year': '1976'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt10872600/>
+{'awards_nominations': '55',
+ 'awards_wins': '27',
+ 'genre': ['Action', 'Adventure', 'Fantasy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '1,892,667,830',
+ 'movie_id': 'tt10872600',
+ 'movie_link': 'https://www.imdb.com/title/tt10872600/',
+ 'origin': ['United States'],
+ 'rank': '107',
+ 'rating': '8.231873921652417',
+ 'runtime_mins': 148,
+ 'title': 'Spider-Man: No Way Home',
+ 'votes': '633944',
+ 'year': '2021'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0036775/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0086250/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0093058/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0053604/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0036775/>
+{'awards_nominations': '9',
+ 'awards_wins': '2',
+ 'genre': ['Crime', 'Drama', 'Film-Noir', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '14,190',
+ 'movie_id': 'tt0036775',
+ 'movie_link': 'https://www.imdb.com/title/tt0036775/',
+ 'origin': ['United States'],
+ 'rank': '104',
+ 'rating': '8.238266806241151',
+ 'runtime_mins': 47,
+ 'title': 'Double Indemnity',
+ 'votes': '154368',
+ 'year': '1944'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0086250/>
+{'awards_nominations': '8',
+ 'awards_wins': '',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '65,884,703',
+ 'movie_id': 'tt0086250',
+ 'movie_link': 'https://www.imdb.com/title/tt0086250/',
+ 'origin': ['United States'],
+ 'rank': '106',
+ 'rating': '8.235027692341639',
+ 'runtime_mins': 170,
+ 'title': 'Scarface',
+ 'votes': '811525',
+ 'year': '1983'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0091251/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0053604/>
+{'awards_nominations': '8',
+ 'awards_wins': '24',
+ 'genre': ['Comedy', 'Drama', 'Romance'],
+ 'gross_worldwide_usd': '18,778,738',
+ 'movie_id': 'tt0053604',
+ 'movie_link': 'https://www.imdb.com/title/tt0053604/',
+ 'origin': ['United States'],
+ 'rank': '105',
+ 'rating': '8.236969290583366',
+ 'runtime_mins': 125,
+ 'title': 'The Apartment',
+ 'votes': '178289',
+ 'year': '1960'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0093058/>
+{'awards_nominations': '15',
+ 'awards_wins': '8',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '46,357,676',
+ 'movie_id': 'tt0093058',
+ 'movie_link': 'https://www.imdb.com/title/tt0093058/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '103',
+ 'rating': '8.240359141038137',
+ 'runtime_mins': 56,
+ 'title': 'Full Metal Jacket',
+ 'votes': '724695',
+ 'year': '1987'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0211915/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0091251/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Drama', 'Thriller', 'War'],
+ 'gross_worldwide_usd': '20,929,648',
+ 'movie_id': 'tt0091251',
+ 'movie_link': 'https://www.imdb.com/title/tt0091251/',
+ 'origin': ['Soviet Union'],
+ 'rank': '102',
+ 'rating': '8.24315283623629',
+ 'runtime_mins': 142,
+ 'title': 'Come and See',
+ 'votes': '75064',
+ 'year': '1985'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0066921/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0211915/>
+{'awards_nominations': '74',
+ 'awards_wins': '59',
+ 'genre': ['Comedy', 'Romance'],
+ 'gross_worldwide_usd': '174,118,254',
+ 'movie_id': 'tt0211915',
+ 'movie_link': 'https://www.imdb.com/title/tt0211915/',
+ 'origin': ['France', 'Germany'],
+ 'rank': '100',
+ 'rating': '8.247172322925978',
+ 'runtime_mins': 122,
+ 'title': 'Amélie',
+ 'votes': '743704',
+ 'year': '2001'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0044741/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0066921/>
+{'awards_nominations': '24',
+ 'awards_wins': '12',
+ 'genre': ['Crime', 'Sci-Fi'],
+ 'gross_worldwide_usd': '26,960,374',
+ 'movie_id': 'tt0066921',
+ 'movie_link': 'https://www.imdb.com/title/tt0066921/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '101',
+ 'rating': '8.245570463990106',
+ 'runtime_mins': 136,
+ 'title': 'A Clockwork Orange',
+ 'votes': '810362',
+ 'year': '1971'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0053125/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0044741/>
+{'awards_nominations': '2',
+ 'awards_wins': '5',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '96,302',
+ 'movie_id': 'tt0044741',
+ 'movie_link': 'https://www.imdb.com/title/tt0044741/',
+ 'origin': ['Japan'],
+ 'rank': '109',
+ 'rating': '8.229182573402742',
+ 'runtime_mins': 143,
+ 'title': 'Ikiru',
+ 'votes': '76798',
+ 'year': '1952'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0053125/>
+{'awards_nominations': '10',
+ 'awards_wins': '8',
+ 'genre': ['Action', 'Adventure', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '142,319',
+ 'movie_id': 'tt0053125',
+ 'movie_link': 'https://www.imdb.com/title/tt0053125/',
+ 'origin': ['United States'],
+ 'rank': '98',
+ 'rating': '8.254212852317977',
+ 'runtime_mins': 136,
+ 'title': 'North by Northwest',
+ 'votes': '321781',
+ 'year': '1959'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0052357/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2106476/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0052357/>
+{'awards_nominations': '7',
+ 'awards_wins': '8',
+ 'genre': ['Mystery', 'Romance', 'Thriller'],
+ 'gross_worldwide_usd': '7,797,728',
+ 'movie_id': 'tt0052357',
+ 'movie_link': 'https://www.imdb.com/title/tt0052357/',
+ 'origin': ['United States'],
+ 'rank': '99',
+ 'rating': '8.248366813237485',
+ 'runtime_mins': 128,
+ 'title': 'Vertigo',
+ 'votes': '394598',
+ 'year': '1958'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4154796/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2106476/>
+{'awards_nominations': '73',
+ 'awards_wins': '38',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '15,843,274',
+ 'movie_id': 'tt2106476',
+ 'movie_link': 'https://www.imdb.com/title/tt2106476/',
+ 'origin': ['Denmark', 'Sweden'],
+ 'rank': '97',
+ 'rating': '8.25488018916345',
+ 'runtime_mins': 55,
+ 'title': 'The Hunt',
+ 'votes': '319859',
+ 'year': '2012'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4154796/>
+{'awards_nominations': '132',
+ 'awards_wins': '70',
+ 'genre': ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
+ 'gross_worldwide_usd': '2,797,501,328',
+ 'movie_id': 'tt4154796',
+ 'movie_link': 'https://www.imdb.com/title/tt4154796/',
+ 'origin': ['United States'],
+ 'rank': '81',
+ 'rating': '8.300291451624686',
+ 'runtime_mins': 180,
+ 'title': 'Avengers: Endgame',
+ 'votes': '1053528',
+ 'year': '2019'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0082096/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0082096/>
+{'awards_nominations': '11',
+ 'awards_wins': '13',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '11,487,676',
+ 'movie_id': 'tt0082096',
+ 'movie_link': 'https://www.imdb.com/title/tt0082096/',
+ 'origin': ['West Germany'],
+ 'rank': '77',
+ 'rating': '8.312032261716544',
+ 'runtime_mins': 149,
+ 'title': 'The Boat',
+ 'votes': '247163',
+ 'year': '1981'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0119698/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0087843/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0119698/>
+{'awards_nominations': '7',
+ 'awards_wins': '14',
+ 'genre': ['Animation', 'Action', 'Adventure', 'Fantasy'],
+ 'gross_worldwide_usd': '169,785,704',
+ 'movie_id': 'tt0119698',
+ 'movie_link': 'https://www.imdb.com/title/tt0119698/',
+ 'origin': ['Japan'],
+ 'rank': '79',
+ 'rating': '8.304024644842519',
+ 'runtime_mins': 134,
+ 'title': 'Princess Mononoke',
+ 'votes': '382382',
+ 'year': '1997'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0087843/>
+{'awards_nominations': '12',
+ 'awards_wins': '12',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '5,473,337',
+ 'movie_id': 'tt0087843',
+ 'movie_link': 'https://www.imdb.com/title/tt0087843/',
+ 'origin': ['Italy', 'United States'],
+ 'rank': '80',
+ 'rating': '8.301969822055637',
+ 'runtime_mins': 229,
+ 'title': 'Once Upon a Time in America',
+ 'votes': '343135',
+ 'year': '1984'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2380307/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0112573/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0361748/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2380307/>
+{'awards_nominations': '40',
+ 'awards_wins': '109',
+ 'genre': ['Animation',
+           'Adventure',
+           'Comedy',
+           'Family',
+           'Fantasy',
+           'Music',
+           'Mystery'],
+ 'gross_worldwide_usd': '807,817,888',
+ 'movie_id': 'tt2380307',
+ 'movie_link': 'https://www.imdb.com/title/tt2380307/',
+ 'origin': ['United States'],
+ 'rank': '76',
+ 'rating': '8.312309959987747',
+ 'runtime_mins': 45,
+ 'title': 'Coco',
+ 'votes': '477730',
+ 'year': '2017'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0112573/>
+{'awards_nominations': '34',
+ 'awards_wins': '33',
+ 'genre': ['Biography', 'Drama', 'History', 'War'],
+ 'gross_worldwide_usd': '213,216,216',
+ 'movie_id': 'tt0112573',
+ 'movie_link': 'https://www.imdb.com/title/tt0112573/',
+ 'origin': ['United States'],
+ 'rank': '73',
+ 'rating': '8.315700771000923',
+ 'runtime_mins': 178,
+ 'title': 'Braveheart',
+ 'votes': '1017403',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0361748/>
+{'awards_nominations': '172',
+ 'awards_wins': '133',
+ 'genre': ['Adventure', 'Drama', 'War'],
+ 'gross_worldwide_usd': '321,457,747',
+ 'movie_id': 'tt0361748',
+ 'movie_link': 'https://www.imdb.com/title/tt0361748/',
+ 'origin': ['Germany', 'United States'],
+ 'rank': '78',
+ 'rating': '8.310276045747175',
+ 'runtime_mins': 153,
+ 'title': 'Inglourious Basterds',
+ 'votes': '1395434',
+ 'year': '2009'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0114709/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0086879/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0364569/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0114709/>
+{'awards_nominations': '23',
+ 'awards_wins': '27',
+ 'genre': ['Animation', 'Adventure', 'Comedy', 'Family', 'Fantasy'],
+ 'gross_worldwide_usd': '394,436,586',
+ 'movie_id': 'tt0114709',
+ 'movie_link': 'https://www.imdb.com/title/tt0114709/',
+ 'origin': ['United States'],
+ 'rank': '75',
+ 'rating': '8.314326309861098',
+ 'runtime_mins': 21,
+ 'title': 'Toy Story',
+ 'votes': '964230',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0086879/>
+{'awards_nominations': '15',
+ 'awards_wins': '43',
+ 'genre': ['Biography', 'Drama', 'Music'],
+ 'gross_worldwide_usd': '52,066,791',
+ 'movie_id': 'tt0086879',
+ 'movie_link': 'https://www.imdb.com/title/tt0086879/',
+ 'origin': ['United States', 'France'],
+ 'rank': '74',
+ 'rating': '8.315345495002589',
+ 'runtime_mins': 160,
+ 'title': 'Amadeus',
+ 'votes': '393703',
+ 'year': '1984'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0364569/>
+{'awards_nominations': '21',
+ 'awards_wins': '40',
+ 'genre': ['Action', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '15,194,593',
+ 'movie_id': 'tt0364569',
+ 'movie_link': 'https://www.imdb.com/title/tt0364569/',
+ 'origin': ['South Korea'],
+ 'rank': '72',
+ 'rating': '8.319893774401558',
+ 'runtime_mins': 120,
+ 'title': 'Oldboy',
+ 'votes': '562309',
+ 'year': '2003'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt7286456/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt7286456/>
+{'awards_nominations': '239',
+ 'awards_wins': '122',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '1,074,445,730',
+ 'movie_id': 'tt7286456',
+ 'movie_link': 'https://www.imdb.com/title/tt7286456/',
+ 'origin': ['United States', 'Canada'],
+ 'rank': '71',
+ 'rating': '8.320487522215608',
+ 'runtime_mins': 122,
+ 'title': 'Joker',
+ 'votes': '1193430',
+ 'year': '2019'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0057012/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0057012/>
+{'awards_nominations': '11',
+ 'awards_wins': '14',
+ 'genre': ['Comedy', 'War'],
+ 'gross_worldwide_usd': '9,523,464',
+ 'movie_id': 'tt0057012',
+ 'movie_link': 'https://www.imdb.com/title/tt0057012/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '68',
+ 'rating': '8.334271265148695',
+ 'runtime_mins': 35,
+ 'title': 'Dr. Strangelove or: How I Learned to Stop Worrying and Love the '
+          'Bomb',
+ 'votes': '480573',
+ 'year': '1964'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1345836/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0169547/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0090605/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1345836/>
+{'awards_nominations': '103',
+ 'awards_wins': '39',
+ 'genre': ['Action', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '1,081,153,097',
+ 'movie_id': 'tt1345836',
+ 'movie_link': 'https://www.imdb.com/title/tt1345836/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '69',
+ 'rating': '8.329037070932978',
+ 'runtime_mins': 164,
+ 'title': 'The Dark Knight Rises',
+ 'votes': '1653986',
+ 'year': '2012'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0051201/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0169547/>
+{'awards_nominations': '102',
+ 'awards_wins': '111',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '356,296,601',
+ 'movie_id': 'tt0169547',
+ 'movie_link': 'https://www.imdb.com/title/tt0169547/',
+ 'origin': ['United States'],
+ 'rank': '67',
+ 'rating': '8.33867609189407',
+ 'runtime_mins': 122,
+ 'title': 'American Beauty',
+ 'votes': '1132352',
+ 'year': '1999'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4154756/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0090605/>
+{'awards_nominations': '23',
+ 'awards_wins': '20',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '131,060,248',
+ 'movie_id': 'tt0090605',
+ 'movie_link': 'https://www.imdb.com/title/tt0090605/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '66',
+ 'rating': '8.344530355442075',
+ 'runtime_mins': 137,
+ 'title': 'Aliens',
+ 'votes': '699971',
+ 'year': '1986'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0051201/>
+{'awards_nominations': '16',
+ 'awards_wins': '4',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '7,693',
+ 'movie_id': 'tt0051201',
+ 'movie_link': 'https://www.imdb.com/title/tt0051201/',
+ 'origin': ['United States'],
+ 'rank': '64',
+ 'rating': '8.356690820018203',
+ 'runtime_mins': 56,
+ 'title': 'Witness for the Prosecution',
+ 'votes': '122210',
+ 'year': '1957'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4154756/>
+{'awards_nominations': '79',
+ 'awards_wins': '46',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi'],
+ 'gross_worldwide_usd': '2,048,359,754',
+ 'movie_id': 'tt4154756',
+ 'movie_link': 'https://www.imdb.com/title/tt4154756/',
+ 'origin': ['United States'],
+ 'rank': '65',
+ 'rating': '8.354436959103092',
+ 'runtime_mins': 149,
+ 'title': 'Avengers: Infinity War',
+ 'votes': '1015571',
+ 'year': '2018'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0032553/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0081505/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt4633694/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0032553/>
+{'awards_nominations': '6',
+ 'awards_wins': '6',
+ 'genre': ['Comedy', 'Drama', 'War'],
+ 'gross_worldwide_usd': '970,263',
+ 'movie_id': 'tt0032553',
+ 'movie_link': 'https://www.imdb.com/title/tt0032553/',
+ 'origin': ['United States'],
+ 'rank': '63',
+ 'rating': '8.36685007062136',
+ 'runtime_mins': 125,
+ 'title': 'The Great Dictator',
+ 'votes': '220241',
+ 'year': '1940'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0081505/>
+{'awards_nominations': '8',
+ 'awards_wins': '4',
+ 'genre': ['Drama', 'Horror'],
+ 'gross_worldwide_usd': '47,299,460',
+ 'movie_id': 'tt0081505',
+ 'movie_link': 'https://www.imdb.com/title/tt0081505/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '62',
+ 'rating': '8.368081390797814',
+ 'runtime_mins': 146,
+ 'title': 'The Shining',
+ 'votes': '985892',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt4633694/>
+{'awards_nominations': '57',
+ 'awards_wins': '82',
+ 'genre': ['Animation',
+           'Action',
+           'Adventure',
+           'Comedy',
+           'Family',
+           'Fantasy',
+           'Sci-Fi'],
+ 'gross_worldwide_usd': '375,540,831',
+ 'movie_id': 'tt4633694',
+ 'movie_link': 'https://www.imdb.com/title/tt4633694/',
+ 'origin': ['United States'],
+ 'rank': '70',
+ 'rating': '8.32744982656181',
+ 'runtime_mins': 57,
+ 'title': 'Spider-Man: Into the Spider-Verse',
+ 'votes': '491003',
+ 'year': '2018'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0405094/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0405094/>
+{'awards_nominations': '38',
+ 'awards_wins': '80',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '77,356,942',
+ 'movie_id': 'tt0405094',
+ 'movie_link': 'https://www.imdb.com/title/tt0405094/',
+ 'origin': ['Germany', 'France'],
+ 'rank': '59',
+ 'rating': '8.386667190999143',
+ 'runtime_mins': 137,
+ 'title': 'The Lives of Others',
+ 'votes': '383424',
+ 'year': '2006'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt6710474/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0050825/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt6710474/>
+{'awards_nominations': '',
+ 'awards_wins': '',
+ 'genre': ['Action', 'Adventure', 'Comedy', 'Fantasy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '53,844,299',
+ 'movie_id': 'tt6710474',
+ 'movie_link': 'https://www.imdb.com/title/tt6710474/',
+ 'origin': ['United States'],
+ 'rank': '56',
+ 'rating': '8.404709625550833',
+ 'runtime_mins': 139,
+ 'title': 'Everything Everywhere All at Once',
+ 'votes': '54362',
+ 'year': '2022'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0910970/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0050825/>
+{'awards_nominations': '4',
+ 'awards_wins': '7',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '5,252',
+ 'movie_id': 'tt0050825',
+ 'movie_link': 'https://www.imdb.com/title/tt0050825/',
+ 'origin': ['United States'],
+ 'rank': '61',
+ 'rating': '8.370724695811415',
+ 'runtime_mins': 28,
+ 'title': 'Paths of Glory',
+ 'votes': '193495',
+ 'year': '1957'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0078788/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0082971/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0910970/>
+{'awards_nominations': '95',
+ 'awards_wins': '94',
+ 'genre': ['Animation', 'Adventure', 'Family', 'Sci-Fi'],
+ 'gross_worldwide_usd': '521,311,890',
+ 'movie_id': 'tt0910970',
+ 'movie_link': 'https://www.imdb.com/title/tt0910970/',
+ 'origin': ['United States'],
+ 'rank': '58',
+ 'rating': '8.392362660499304',
+ 'runtime_mins': 38,
+ 'title': 'WALL·E',
+ 'votes': '1084588',
+ 'year': '2008'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1853728/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0078788/>
+{'awards_nominations': '33',
+ 'awards_wins': '21',
+ 'genre': ['Drama', 'Mystery', 'War'],
+ 'gross_worldwide_usd': '92,158,064',
+ 'movie_id': 'tt0078788',
+ 'movie_link': 'https://www.imdb.com/title/tt0078788/',
+ 'origin': ['United States'],
+ 'rank': '54',
+ 'rating': '8.425589361947464',
+ 'runtime_mins': 147,
+ 'title': 'Apocalypse Now',
+ 'votes': '651465',
+ 'year': '1979'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0082971/>
+{'awards_nominations': '24',
+ 'awards_wins': '38',
+ 'genre': ['Action', 'Adventure'],
+ 'gross_worldwide_usd': '389,925,971',
+ 'movie_id': 'tt0082971',
+ 'movie_link': 'https://www.imdb.com/title/tt0082971/',
+ 'origin': ['United States'],
+ 'rank': '55',
+ 'rating': '8.41200856126311',
+ 'runtime_mins': 55,
+ 'title': 'Indiana Jones and the Raiders of the Lost Ark',
+ 'votes': '943997',
+ 'year': '1981'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1853728/>
+{'awards_nominations': '158',
+ 'awards_wins': '58',
+ 'genre': ['Drama', 'Western'],
+ 'gross_worldwide_usd': '426,074,373',
+ 'movie_id': 'tt1853728',
+ 'movie_link': 'https://www.imdb.com/title/tt1853728/',
+ 'origin': ['United States'],
+ 'rank': '57',
+ 'rating': '8.402145166625246',
+ 'runtime_mins': 165,
+ 'title': 'Django Unchained',
+ 'votes': '1496269',
+ 'year': '2012'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0209144/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0209144/>
+{'awards_nominations': '59',
+ 'awards_wins': '57',
+ 'genre': ['Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '40,047,078',
+ 'movie_id': 'tt0209144',
+ 'movie_link': 'https://www.imdb.com/title/tt0209144/',
+ 'origin': ['United States'],
+ 'rank': '53',
+ 'rating': '8.426461316499749',
+ 'runtime_mins': 53,
+ 'title': 'Memento',
+ 'votes': '1207802',
+ 'year': '2000'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0095765/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0095765/>
+{'awards_nominations': '32',
+ 'awards_wins': '25',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '13,019,063',
+ 'movie_id': 'tt0095765',
+ 'movie_link': 'https://www.imdb.com/title/tt0095765/',
+ 'origin': ['Italy', 'France'],
+ 'rank': '52',
+ 'rating': '8.428874279398011',
+ 'runtime_mins': 155,
+ 'title': 'Cinema Paradiso',
+ 'votes': '254808',
+ 'year': '1988'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0078748/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0095327/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0047396/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0064116/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0078748/>
+{'awards_nominations': '22',
+ 'awards_wins': '18',
+ 'genre': ['Horror', 'Sci-Fi'],
+ 'gross_worldwide_usd': '106,285,522',
+ 'movie_id': 'tt0078748',
+ 'movie_link': 'https://www.imdb.com/title/tt0078748/',
+ 'origin': ['United Kingdom', 'United States'],
+ 'rank': '50',
+ 'rating': '8.435505592769646',
+ 'runtime_mins': 57,
+ 'title': 'Alien',
+ 'votes': '854378',
+ 'year': '1979'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0095327/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Animation', 'Drama', 'War'],
+ 'gross_worldwide_usd': '516,962',
+ 'movie_id': 'tt0095327',
+ 'movie_link': 'https://www.imdb.com/title/tt0095327/',
+ 'origin': ['Japan'],
+ 'rank': '48',
+ 'rating': '8.446917270303706',
+ 'runtime_mins': 29,
+ 'title': 'Grave of the Fireflies',
+ 'votes': '267065',
+ 'year': '1988'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0047396/>
+{'awards_nominations': '13',
+ 'awards_wins': '6',
+ 'genre': ['Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '37,034,514',
+ 'movie_id': 'tt0047396',
+ 'movie_link': 'https://www.imdb.com/title/tt0047396/',
+ 'origin': ['United States'],
+ 'rank': '49',
+ 'rating': '8.437539464579524',
+ 'runtime_mins': 52,
+ 'title': 'Rear Window',
+ 'votes': '480874',
+ 'year': '1954'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0064116/>
+{'awards_nominations': '5',
+ 'awards_wins': '4',
+ 'genre': ['Western'],
+ 'gross_worldwide_usd': '5,434,825',
+ 'movie_id': 'tt0064116',
+ 'movie_link': 'https://www.imdb.com/title/tt0064116/',
+ 'origin': ['Italy', 'United States'],
+ 'rank': '47',
+ 'rating': '8.448331017322696',
+ 'runtime_mins': 165,
+ 'title': 'Once Upon a Time in the West',
+ 'votes': '323495',
+ 'year': '1968'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0043014/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0021749/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0043014/>
+{'awards_nominations': '20',
+ 'awards_wins': '18',
+ 'genre': ['Drama', 'Film-Noir'],
+ 'gross_worldwide_usd': '300,073',
+ 'movie_id': 'tt0043014',
+ 'movie_link': 'https://www.imdb.com/title/tt0043014/',
+ 'origin': ['United States'],
+ 'rank': '60',
+ 'rating': '8.383287240077946',
+ 'runtime_mins': 50,
+ 'title': 'Sunset Blvd.',
+ 'votes': '217748',
+ 'year': '1950'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0056058/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0021749/>
+{'awards_nominations': '',
+ 'awards_wins': '3',
+ 'genre': ['Comedy', 'Drama', 'Romance'],
+ 'gross_worldwide_usd': '50,419',
+ 'movie_id': 'tt0021749',
+ 'movie_link': 'https://www.imdb.com/title/tt0021749/',
+ 'origin': ['United States'],
+ 'rank': '51',
+ 'rating': '8.434551886614406',
+ 'runtime_mins': 27,
+ 'title': 'City Lights',
+ 'votes': '181669',
+ 'year': '1931'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0056058/>
+{'awards_nominations': '3',
+ 'awards_wins': '9',
+ 'genre': ['Action', 'Drama', 'Mystery'],
+ 'gross_worldwide_usd': '15,222',
+ 'movie_id': 'tt0056058',
+ 'movie_link': 'https://www.imdb.com/title/tt0056058/',
+ 'origin': ['Japan'],
+ 'rank': '46',
+ 'rating': '8.448947606907163',
+ 'runtime_mins': 133,
+ 'title': 'Hara-Kiri',
+ 'votes': '53970',
+ 'year': '1962'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0027977/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt2582802/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0027977/>
+{'awards_nominations': '',
+ 'awards_wins': '4',
+ 'genre': ['Comedy', 'Drama', 'Romance'],
+ 'gross_worldwide_usd': '461,455',
+ 'movie_id': 'tt0027977',
+ 'movie_link': 'https://www.imdb.com/title/tt0027977/',
+ 'origin': ['United States'],
+ 'rank': '45',
+ 'rating': '8.450105223424824',
+ 'runtime_mins': 27,
+ 'title': 'Modern Times',
+ 'votes': '237418',
+ 'year': '1936'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0034583/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1675434/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt2582802/>
+{'awards_nominations': '145',
+ 'awards_wins': '98',
+ 'genre': ['Drama', 'Music'],
+ 'gross_worldwide_usd': '49,396,747',
+ 'movie_id': 'tt2582802',
+ 'movie_link': 'https://www.imdb.com/title/tt2582802/',
+ 'origin': ['United States'],
+ 'rank': '43',
+ 'rating': '8.45941249767383',
+ 'runtime_mins': 46,
+ 'title': 'Whiplash',
+ 'votes': '809435',
+ 'year': '2014'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0034583/>
+{'awards_nominations': '9',
+ 'awards_wins': '10',
+ 'genre': ['Drama', 'Romance', 'War'],
+ 'gross_worldwide_usd': '4,497,613',
+ 'movie_id': 'tt0034583',
+ 'movie_link': 'https://www.imdb.com/title/tt0034583/',
+ 'origin': ['United States'],
+ 'rank': '42',
+ 'rating': '8.465756916905777',
+ 'runtime_mins': 42,
+ 'title': 'Casablanca',
+ 'votes': '559795',
+ 'year': '1942'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0482571/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1675434/>
+{'awards_nominations': '40',
+ 'awards_wins': '38',
+ 'genre': ['Biography', 'Comedy', 'Drama'],
+ 'gross_worldwide_usd': '426,588,510',
+ 'movie_id': 'tt1675434',
+ 'movie_link': 'https://www.imdb.com/title/tt1675434/',
+ 'origin': ['France'],
+ 'rank': '44',
+ 'rating': '8.454218038886037',
+ 'runtime_mins': 52,
+ 'title': 'The Intouchables',
+ 'votes': '832289',
+ 'year': '2011'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0114814/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0407887/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0482571/>
+{'awards_nominations': '45',
+ 'awards_wins': '6',
+ 'genre': ['Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '109,676,311',
+ 'movie_id': 'tt0482571',
+ 'movie_link': 'https://www.imdb.com/title/tt0482571/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '41',
+ 'rating': '8.467825543240567',
+ 'runtime_mins': 130,
+ 'title': 'The Prestige',
+ 'votes': '1294585',
+ 'year': '2006'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120586/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0114814/>
+{'awards_nominations': '17',
+ 'awards_wins': '37',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '23,341,568',
+ 'movie_id': 'tt0114814',
+ 'movie_link': 'https://www.imdb.com/title/tt0114814/',
+ 'origin': ['United States', 'Germany'],
+ 'rank': '39',
+ 'rating': '8.477141345429462',
+ 'runtime_mins': 46,
+ 'title': 'The Usual Suspects',
+ 'votes': '1061139',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0407887/>
+{'awards_nominations': '141',
+ 'awards_wins': '97',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '291,480,452',
+ 'movie_id': 'tt0407887',
+ 'movie_link': 'https://www.imdb.com/title/tt0407887/',
+ 'origin': ['United States', 'Hong Kong'],
+ 'rank': '40',
+ 'rating': '8.474958519849896',
+ 'runtime_mins': 151,
+ 'title': 'The Departed',
+ 'votes': '1286797',
+ 'year': '2006'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120586/>
+{'awards_nominations': '15',
+ 'awards_wins': '4',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '23,875,127',
+ 'movie_id': 'tt0120586',
+ 'movie_link': 'https://www.imdb.com/title/tt0120586/',
+ 'origin': ['United States'],
+ 'rank': '38',
+ 'rating': '8.484902222838919',
+ 'runtime_mins': 59,
+ 'title': 'American History X',
+ 'votes': '1096878',
+ 'year': '1998'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0110357/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0172495/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0110357/>
+{'awards_nominations': '35',
+ 'awards_wins': '40',
+ 'genre': ['Animation', 'Adventure', 'Drama', 'Family', 'Musical'],
+ 'gross_worldwide_usd': '1,063,611,805',
+ 'movie_id': 'tt0110357',
+ 'movie_link': 'https://www.imdb.com/title/tt0110357/',
+ 'origin': ['United States'],
+ 'rank': '36',
+ 'rating': '8.488442308728164',
+ 'runtime_mins': 28,
+ 'title': 'The Lion King',
+ 'votes': '1025147',
+ 'year': '1994'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt6751668/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0172495/>
+{'awards_nominations': '106',
+ 'awards_wins': '59',
+ 'genre': ['Action', 'Adventure', 'Drama'],
+ 'gross_worldwide_usd': '465,380,802',
+ 'movie_id': 'tt0172495',
+ 'movie_link': 'https://www.imdb.com/title/tt0172495/',
+ 'origin': ['United States', 'United Kingdom', 'Malta', 'Morocco'],
+ 'rank': '37',
+ 'rating': '8.484974544214154',
+ 'runtime_mins': 155,
+ 'title': 'Gladiator',
+ 'votes': '1454913',
+ 'year': '2000'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0110413/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0253474/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt6751668/>
+{'awards_nominations': '271',
+ 'awards_wins': '308',
+ 'genre': ['Comedy', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '263,136,741',
+ 'movie_id': 'tt6751668',
+ 'movie_link': 'https://www.imdb.com/title/tt6751668/',
+ 'origin': ['South Korea'],
+ 'rank': '35',
+ 'rating': '8.495413193375832',
+ 'runtime_mins': 132,
+ 'title': 'Parasite',
+ 'votes': '744265',
+ 'year': '2019'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0110413/>
+{'awards_nominations': '15',
+ 'awards_wins': '6',
+ 'genre': ['Action', 'Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '19,552,639',
+ 'movie_id': 'tt0110413',
+ 'movie_link': 'https://www.imdb.com/title/tt0110413/',
+ 'origin': ['France', 'United States'],
+ 'rank': '34',
+ 'rating': '8.501298451703757',
+ 'runtime_mins': 50,
+ 'title': 'Léon: The Professional',
+ 'votes': '1127232',
+ 'year': '1994'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0253474/>
+{'awards_nominations': '74',
+ 'awards_wins': '57',
+ 'genre': ['Biography', 'Drama', 'Music', 'War'],
+ 'gross_worldwide_usd': '120,072,577',
+ 'movie_id': 'tt0253474',
+ 'movie_link': 'https://www.imdb.com/title/tt0253474/',
+ 'origin': ['France', 'Poland', 'Germany', 'United Kingdom'],
+ 'rank': '33',
+ 'rating': '8.504507850078856',
+ 'runtime_mins': 150,
+ 'title': 'The Pianist',
+ 'votes': '805712',
+ 'year': '2002'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0245429/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0054215/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0245429/>
+{'awards_nominations': '31',
+ 'awards_wins': '58',
+ 'genre': ['Animation', 'Adventure', 'Family', 'Fantasy', 'Mystery'],
+ 'gross_worldwide_usd': '355,725,195',
+ 'movie_id': 'tt0245429',
+ 'movie_link': 'https://www.imdb.com/title/tt0245429/',
+ 'origin': ['Japan'],
+ 'rank': '31',
+ 'rating': '8.51534670131576',
+ 'runtime_mins': 125,
+ 'title': 'Spirited Away',
+ 'votes': '732894',
+ 'year': '2001'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0088763/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0054215/>
+{'awards_nominations': '14',
+ 'awards_wins': '7',
+ 'genre': ['Horror', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '32,041,931',
+ 'movie_id': 'tt0054215',
+ 'movie_link': 'https://www.imdb.com/title/tt0054215/',
+ 'origin': ['United States'],
+ 'rank': '32',
+ 'rating': '8.508715817516276',
+ 'runtime_mins': 49,
+ 'title': 'Psycho',
+ 'votes': '653636',
+ 'year': '1960'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0103064/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0088763/>
+{'awards_nominations': '25',
+ 'awards_wins': '22',
+ 'genre': ['Adventure', 'Comedy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '383,336,762',
+ 'movie_id': 'tt0088763',
+ 'movie_link': 'https://www.imdb.com/title/tt0088763/',
+ 'origin': ['United States'],
+ 'rank': '30',
+ 'rating': '8.517805629548832',
+ 'runtime_mins': 56,
+ 'title': 'Back to the Future',
+ 'votes': '1161398',
+ 'year': '1985'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0816692/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120689/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0103064/>
+{'awards_nominations': '33',
+ 'awards_wins': '36',
+ 'genre': ['Action', 'Sci-Fi'],
+ 'gross_worldwide_usd': '520,881,154',
+ 'movie_id': 'tt0103064',
+ 'movie_link': 'https://www.imdb.com/title/tt0103064/',
+ 'origin': ['United States'],
+ 'rank': '29',
+ 'rating': '8.534719888732127',
+ 'runtime_mins': 137,
+ 'title': 'Terminator 2: Judgment Day',
+ 'votes': '1068847',
+ 'year': '1991'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0816692/>
+{'awards_nominations': '148',
+ 'awards_wins': '44',
+ 'genre': ['Adventure', 'Drama', 'Sci-Fi'],
+ 'gross_worldwide_usd': '701,729,206',
+ 'movie_id': 'tt0816692',
+ 'movie_link': 'https://www.imdb.com/title/tt0816692/',
+ 'origin': ['United States', 'United Kingdom', 'Canada'],
+ 'rank': '28',
+ 'rating': '8.554223993365174',
+ 'runtime_mins': 169,
+ 'title': 'Interstellar',
+ 'votes': '1731662',
+ 'year': '2014'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120689/>
+{'awards_nominations': '37',
+ 'awards_wins': '15',
+ 'genre': ['Crime', 'Drama', 'Fantasy', 'Mystery'],
+ 'gross_worldwide_usd': '286,801,374',
+ 'movie_id': 'tt0120689',
+ 'movie_link': 'https://www.imdb.com/title/tt0120689/',
+ 'origin': ['United States'],
+ 'rank': '26',
+ 'rating': '8.559428451296018',
+ 'runtime_mins': 189,
+ 'title': 'The Green Mile',
+ 'votes': '1258395',
+ 'year': '1999'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0076759/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0076759/>
+{'awards_nominations': '29',
+ 'awards_wins': '63',
+ 'genre': ['Action', 'Adventure', 'Fantasy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '775,398,007',
+ 'movie_id': 'tt0076759',
+ 'movie_link': 'https://www.imdb.com/title/tt0076759/',
+ 'origin': ['United States'],
+ 'rank': '27',
+ 'rating': '8.554647395943517',
+ 'runtime_mins': 120,
+ 'title': 'Star Wars',
+ 'votes': '1323243',
+ 'year': '1977'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0118799/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120815/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0118799/>
+{'awards_nominations': '52',
+ 'awards_wins': '72',
+ 'genre': ['Comedy', 'Drama', 'Romance', 'War'],
+ 'gross_worldwide_usd': '230,098,753',
+ 'movie_id': 'tt0118799',
+ 'movie_link': 'https://www.imdb.com/title/tt0118799/',
+ 'origin': ['Italy'],
+ 'rank': '25',
+ 'rating': '8.566089760046351',
+ 'runtime_mins': 56,
+ 'title': 'Life Is Beautiful',
+ 'votes': '676954',
+ 'year': '1997'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0317248/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0102926/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120815/>
+{'awards_nominations': '75',
+ 'awards_wins': '79',
+ 'genre': ['Drama', 'War'],
+ 'gross_worldwide_usd': '482,349,603',
+ 'movie_id': 'tt0120815',
+ 'movie_link': 'https://www.imdb.com/title/tt0120815/',
+ 'origin': ['United States'],
+ 'rank': '24',
+ 'rating': '8.577368402961993',
+ 'runtime_mins': 169,
+ 'title': 'Saving Private Ryan',
+ 'votes': '1347596',
+ 'year': '1998'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0317248/>
+{'awards_nominations': '50',
+ 'awards_wins': '74',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '30,680,793',
+ 'movie_id': 'tt0317248',
+ 'movie_link': 'https://www.imdb.com/title/tt0317248/',
+ 'origin': ['Brazil', 'France', 'Germany'],
+ 'rank': '23',
+ 'rating': '8.57908537566644',
+ 'runtime_mins': 130,
+ 'title': 'City of God',
+ 'votes': '741505',
+ 'year': '2002'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0114369/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0038650/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0102926/>
+{'awards_nominations': '51',
+ 'awards_wins': '69',
+ 'genre': ['Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '272,742,922',
+ 'movie_id': 'tt0102926',
+ 'movie_link': 'https://www.imdb.com/title/tt0102926/',
+ 'origin': ['United States'],
+ 'rank': '22',
+ 'rating': '8.587964228655503',
+ 'runtime_mins': 58,
+ 'title': 'The Silence of the Lambs',
+ 'votes': '1386087',
+ 'year': '1991'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0114369/>
+{'awards_nominations': '43',
+ 'awards_wins': '29',
+ 'genre': ['Crime', 'Drama', 'Mystery', 'Thriller'],
+ 'gross_worldwide_usd': '327,333,559',
+ 'movie_id': 'tt0114369',
+ 'movie_link': 'https://www.imdb.com/title/tt0114369/',
+ 'origin': ['United States'],
+ 'rank': '19',
+ 'rating': '8.603831401977992',
+ 'runtime_mins': 127,
+ 'title': 'Se7en',
+ 'votes': '1588324',
+ 'year': '1995'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0038650/>
+{'awards_nominations': '6',
+ 'awards_wins': '6',
+ 'genre': ['Drama', 'Family', 'Fantasy', 'Romance'],
+ 'gross_worldwide_usd': '6,184,298',
+ 'movie_id': 'tt0038650',
+ 'movie_link': 'https://www.imdb.com/title/tt0038650/',
+ 'origin': ['United States'],
+ 'rank': '21',
+ 'rating': '8.5970491644179',
+ 'runtime_mins': 130,
+ 'title': "It's a Wonderful Life",
+ 'votes': '445119',
+ 'year': '1946'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0047478/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0047478/>
+{'awards_nominations': '8',
+ 'awards_wins': '5',
+ 'genre': ['Action', 'Drama'],
+ 'gross_worldwide_usd': '346,258',
+ 'movie_id': 'tt0047478',
+ 'movie_link': 'https://www.imdb.com/title/tt0047478/',
+ 'origin': ['Japan'],
+ 'rank': '20',
+ 'rating': '8.599277953925505',
+ 'runtime_mins': 207,
+ 'title': 'Seven Samurai',
+ 'votes': '339249',
+ 'year': '1954'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0099685/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0080684/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0167261/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0073486/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0099685/>
+{'awards_nominations': '38',
+ 'awards_wins': '44',
+ 'genre': ['Biography', 'Crime', 'Drama'],
+ 'gross_worldwide_usd': '47,036,784',
+ 'movie_id': 'tt0099685',
+ 'movie_link': 'https://www.imdb.com/title/tt0099685/',
+ 'origin': ['United States'],
+ 'rank': '17',
+ 'rating': '8.650624508613326',
+ 'runtime_mins': 145,
+ 'title': 'Goodfellas',
+ 'votes': '1116602',
+ 'year': '1990'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0080684/>
+{'awards_nominations': '20',
+ 'awards_wins': '25',
+ 'genre': ['Action', 'Adventure', 'Fantasy', 'Sci-Fi'],
+ 'gross_worldwide_usd': '538,375,067',
+ 'movie_id': 'tt0080684',
+ 'movie_link': 'https://www.imdb.com/title/tt0080684/',
+ 'origin': ['United States'],
+ 'rank': '15',
+ 'rating': '8.70173289730277',
+ 'runtime_mins': 124,
+ 'title': 'Star Wars: Episode V - The Empire Strikes Back',
+ 'votes': '1251718',
+ 'year': '1980'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0167261/>
+{'awards_nominations': '138',
+ 'awards_wins': '126',
+ 'genre': ['Action', 'Adventure', 'Drama', 'Fantasy'],
+ 'gross_worldwide_usd': '947,896,241',
+ 'movie_id': 'tt0167261',
+ 'movie_link': 'https://www.imdb.com/title/tt0167261/',
+ 'origin': ['New Zealand', 'United States'],
+ 'rank': '14',
+ 'rating': '8.727348622889082',
+ 'runtime_mins': 179,
+ 'title': 'The Lord of the Rings: The Two Towers',
+ 'votes': '1606486',
+ 'year': '2002'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0073486/>
+{'awards_nominations': '16',
+ 'awards_wins': '38',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '109,114,817',
+ 'movie_id': 'tt0073486',
+ 'movie_link': 'https://www.imdb.com/title/tt0073486/',
+ 'origin': ['United States'],
+ 'rank': '18',
+ 'rating': '8.641552579654634',
+ 'runtime_mins': 133,
+ 'title': "One Flew Over the Cuckoo's Nest",
+ 'votes': '983935',
+ 'year': '1975'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0137523/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0133093/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt1375666/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0137523/>
+{'awards_nominations': '38',
+ 'awards_wins': '11',
+ 'genre': ['Drama'],
+ 'gross_worldwide_usd': '101,209,702',
+ 'movie_id': 'tt0137523',
+ 'movie_link': 'https://www.imdb.com/title/tt0137523/',
+ 'origin': ['United States', 'Germany'],
+ 'rank': '12',
+ 'rating': '8.75034205026206',
+ 'runtime_mins': 139,
+ 'title': 'Fight Club',
+ 'votes': '2037758',
+ 'year': '1999'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0133093/>
+{'awards_nominations': '51',
+ 'awards_wins': '42',
+ 'genre': ['Action', 'Sci-Fi'],
+ 'gross_worldwide_usd': '467,222,728',
+ 'movie_id': 'tt0133093',
+ 'movie_link': 'https://www.imdb.com/title/tt0133093/',
+ 'origin': ['United States', 'Australia'],
+ 'rank': '16',
+ 'rating': '8.67110853981891',
+ 'runtime_mins': 136,
+ 'title': 'The Matrix',
+ 'votes': '1859912',
+ 'year': '1999'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt1375666/>
+{'awards_nominations': '220',
+ 'awards_wins': '157',
+ 'genre': ['Action', 'Adventure', 'Sci-Fi', 'Thriller'],
+ 'gross_worldwide_usd': '836,848,102',
+ 'movie_id': 'tt1375666',
+ 'movie_link': 'https://www.imdb.com/title/tt1375666/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '13',
+ 'rating': '8.732842598256157',
+ 'runtime_mins': 148,
+ 'title': 'Inception',
+ 'votes': '2271464',
+ 'year': '2010'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0109830/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0060196/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0109830/>
+{'awards_nominations': '75',
+ 'awards_wins': '50',
+ 'genre': ['Drama', 'Romance'],
+ 'gross_worldwide_usd': '678,226,133',
+ 'movie_id': 'tt0109830',
+ 'movie_link': 'https://www.imdb.com/title/tt0109830/',
+ 'origin': ['United States'],
+ 'rank': '11',
+ 'rating': '8.76722777436213',
+ 'runtime_mins': 142,
+ 'title': 'Forrest Gump',
+ 'votes': '1997592',
+ 'year': '1994'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0167260/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0110912/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0060196/>
+{'awards_nominations': '6',
+ 'awards_wins': '3',
+ 'genre': ['Adventure', 'Western'],
+ 'gross_worldwide_usd': '25,253,887',
+ 'movie_id': 'tt0060196',
+ 'movie_link': 'https://www.imdb.com/title/tt0060196/',
+ 'origin': ['Italy', 'Spain', 'West Germany'],
+ 'rank': '10',
+ 'rating': '8.7940226872414',
+ 'runtime_mins': 178,
+ 'title': 'The Good, the Bad and the Ugly',
+ 'votes': '743043',
+ 'year': '1966'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0167260/>
+{'awards_nominations': '124',
+ 'awards_wins': '209',
+ 'genre': ['Action', 'Adventure', 'Drama', 'Fantasy'],
+ 'gross_worldwide_usd': '1,146,436,214',
+ 'movie_id': 'tt0167260',
+ 'movie_link': 'https://www.imdb.com/title/tt0167260/',
+ 'origin': ['New Zealand', 'United States'],
+ 'rank': '7',
+ 'rating': '8.920468715709022',
+ 'runtime_mins': 201,
+ 'title': 'The Lord of the Rings: The Return of the King',
+ 'votes': '1778695',
+ 'year': '2003'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0110912/>
+{'awards_nominations': '75',
+ 'awards_wins': '70',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '213,928,762',
+ 'movie_id': 'tt0110912',
+ 'movie_link': 'https://www.imdb.com/title/tt0110912/',
+ 'origin': ['United States'],
+ 'rank': '8',
+ 'rating': '8.851104630638424',
+ 'runtime_mins': 154,
+ 'title': 'Pulp Fiction',
+ 'votes': '1985027',
+ 'year': '1994'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0120737/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0108052/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0050083/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0120737/>
+{'awards_nominations': '126',
+ 'awards_wins': '121',
+ 'genre': ['Action', 'Adventure', 'Drama', 'Fantasy'],
+ 'gross_worldwide_usd': '898,094,742',
+ 'movie_id': 'tt0120737',
+ 'movie_link': 'https://www.imdb.com/title/tt0120737/',
+ 'origin': ['New Zealand', 'United States'],
+ 'rank': '9',
+ 'rating': '8.80318889385756',
+ 'runtime_mins': 178,
+ 'title': 'The Lord of the Rings: The Fellowship of the Ring',
+ 'votes': '1799926',
+ 'year': '2001'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0108052/>
+{'awards_nominations': '49',
+ 'awards_wins': '91',
+ 'genre': ['Biography', 'Drama', 'History'],
+ 'gross_worldwide_usd': '322,161,245',
+ 'movie_id': 'tt0108052',
+ 'movie_link': 'https://www.imdb.com/title/tt0108052/',
+ 'origin': ['United States'],
+ 'rank': '6',
+ 'rating': '8.934911897686664',
+ 'runtime_mins': 195,
+ 'title': "Schindler's List",
+ 'votes': '1317263',
+ 'year': '1993'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0050083/>
+{'awards_nominations': '13',
+ 'awards_wins': '17',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '955',
+ 'movie_id': 'tt0050083',
+ 'movie_link': 'https://www.imdb.com/title/tt0050083/',
+ 'origin': ['United States'],
+ 'rank': '5',
+ 'rating': '8.947002315723642',
+ 'runtime_mins': 36,
+ 'title': '12 Angry Men',
+ 'votes': '764634',
+ 'year': '1957'}
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0071562/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0468569/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.imdb.com/title/tt0068646/> (referer: https://www.imdb.com/chart/top)
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0071562/>
+{'awards_nominations': '20',
+ 'awards_wins': '17',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '47,961,010',
+ 'movie_id': 'tt0071562',
+ 'movie_link': 'https://www.imdb.com/title/tt0071562/',
+ 'origin': ['United States'],
+ 'rank': '4',
+ 'rating': '8.983855555307388',
+ 'runtime_mins': 202,
+ 'title': 'The Godfather: Part II',
+ 'votes': '1231711',
+ 'year': '1974'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0468569/>
+{'awards_nominations': '163',
+ 'awards_wins': '159',
+ 'genre': ['Action', 'Crime', 'Drama', 'Thriller'],
+ 'gross_worldwide_usd': '1,006,102,277',
+ 'movie_id': 'tt0468569',
+ 'movie_link': 'https://www.imdb.com/title/tt0468569/',
+ 'origin': ['United States', 'United Kingdom'],
+ 'rank': '3',
+ 'rating': '8.984854516173014',
+ 'runtime_mins': 152,
+ 'title': 'The Dark Knight',
+ 'votes': '2559183',
+ 'year': '2008'}
+DEBUG:scrapy.core.scraper:Scraped from <200 https://www.imdb.com/title/tt0068646/>
+{'awards_nominations': '30',
+ 'awards_wins': '31',
+ 'genre': ['Crime', 'Drama'],
+ 'gross_worldwide_usd': '250,341,816',
+ 'movie_id': 'tt0068646',
+ 'movie_link': 'https://www.imdb.com/title/tt0068646/',
+ 'origin': ['United States'],
+ 'rank': '2',
+ 'rating': '9.155752524545253',
+ 'runtime_mins': 175,
+ 'title': 'The Godfather',
+ 'votes': '1783891',
+ 'year': '1972'}
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.extensions.feedexport:Stored csv feed (250 items) in: IMDBTop250.csv
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 110945,
+ 'downloader/request_count': 252,
+ 'downloader/request_method_count/GET': 252,
+ 'downloader/response_bytes': 32755382,
+ 'downloader/response_count': 252,
+ 'downloader/response_status_count/200': 251,
+ 'downloader/response_status_count/301': 1,
+ 'elapsed_time_seconds': 31.329476,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 5, 20, 23, 24, 28, 83402),
+ 'httpcompression/response_bytes': 196862158,
+ 'httpcompression/response_count': 250,
+ 'item_scraped_count': 250,
+ 'log_count/DEBUG': 507,
+ 'log_count/INFO': 11,
+ 'request_depth_max': 1,
+ 'response_received_count': 251,
+ 'scheduler/dequeued': 252,
+ 'scheduler/dequeued/memory': 252,
+ 'scheduler/enqueued': 252,
+ 'scheduler/enqueued/memory': 252,
+ 'start_time': datetime.datetime(2022, 5, 20, 23, 23, 56, 753926)}
+INFO:scrapy.core.engine:Spider closed (finished)
