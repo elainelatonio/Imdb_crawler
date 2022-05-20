@@ -1,6 +1,7 @@
 import scrapy
 from items import Imdb_item
 from scrapy.crawler import CrawlerProcess
+import re
 
 
 class Imdb_spider(scrapy.Spider):
@@ -33,16 +34,16 @@ class Imdb_spider(scrapy.Spider):
     def parse_movie(self, response, movie):
         movie['movie_link'] = response.url
         movie['genre'] = response.xpath("//li[@data-testid='storyline-genres']/div/ul/li/a/text()").getall()
-        movie['runtime_mins'] = int(response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()[0])*60+\
-                           int(response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()[4])
-        movie['budget'] = response.xpath("//li[@data-testid='title-boxoffice-budget']/div/ul/li/span/text()").getall()
+        movie['runtime_mins'] = (int(response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()[0])*60
+                                 if 'hours' in response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()
+                                 else 0) + (int(re.findall('(\d+) minutes',''.join(map(str,response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall())))[0])
+                                if 'minutes' in response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall() else 0)
+        # movie['budget'] = response.xpath("//li[@data-testid='title-boxoffice-budget']/div/ul/li/span/text()").getall()
         movie['origin'] = response.xpath("//li[@data-testid='title-details-origin']/div/ul/li/a/text()").getall()
-        movie['awards_wins'] = response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0].split()[0] \
-            if 'wins' in response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0].split() else 0
-        movie['awards_nominations'] = response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0].split(' & ')[1].split()[0]\
-            if 'nominations' in response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0].split() else 0
+        movie['awards_wins'] = ''.join(map(str,(re.findall('(\d+) wins', response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0],re.IGNORECASE))))
+        movie['awards_nominations'] = ''.join(map(str,(re.findall('(\d+) nominations', response.xpath("//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0],re.IGNORECASE))))
         movie['gross_worldwide_usd'] = response.xpath("//li[@data-testid='title-boxoffice-cumulativeworldwidegross']"
-                                                      "/div/ul/li/span/text()").getall()[0].replace('$','')
+                                                      "/div/ul/li/span/text()").get().replace('$','') if response.xpath("//li[@data-testid='title-boxoffice-cumulativeworldwidegross']/div/ul/li/span/text()").get() != None else 0
         return movie
 
 

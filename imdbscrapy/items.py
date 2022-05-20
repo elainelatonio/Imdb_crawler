@@ -15,7 +15,6 @@ class Imdb_item(scrapy.Item):
     rating = scrapy.Field()
     genre = scrapy.Field()
     runtime_mins = scrapy.Field()
-    budget = scrapy.Field()
     origin = scrapy.Field()
     votes = scrapy.Field()
     awards_wins = scrapy.Field()
