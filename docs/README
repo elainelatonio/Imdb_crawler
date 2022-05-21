@@ -3,8 +3,10 @@ IMDBScrapy
 The project leverages on the Scrapy module to crawl data from IMDB and then, mainly Pandas and Matplotlib for
 the subsequent analysis.
 
-The structure of the project is given below, following the default structure of a Scrapy project:
-(for more information, https://docs.scrapy.org/en/latest/topics/commands.html#default-structure-of-scrapy-projects)
+The structure of the project is given below, building on the default Scrapy project structure:
+(for more information - https://docs.scrapy.org/en/latest/topics/commands.html#default-structure-of-scrapy-projects
+Installing Scrapy - https://docs.scrapy.org/en/latest/intro/install.html)
+
 imdbscrapy
   ├── docs
   │ ├── README.md                       # brief summary and description of the project and components
@@ -19,17 +21,13 @@ imdbscrapy
     ├── pipelines.py                    # part of the default scrapy package (no amendment done)
     ├── settings.py                     # part of the default scrapy package (no amendment done)
     ├── logs.log                        # log file
-    └── spiders
-        ├──__init__.py
-        └──imdb_spider.py               # scrapy spider to crawl IMDB data
+    └── imdb_spider.py                  # scrapy spider to crawl IMDB data
 
 CRAWLING SCRIPT:
-The crawling script can be run on the command line with the following command if the Scrapy package is installed:
-    scrapy crawl imdbspider
-(Installing Scrapy - https://docs.scrapy.org/en/latest/intro/install.html
-More info on Scrapy tool commands: https://docs.scrapy.org/en/latest/topics/commands.html#available-tool-commands)
+The crawling script imdb_spider.py can be run separately on the command line as any python script:
+    python3 imdb_spider.py
 
-The crawling script is also called in main.py hence running the python file will also generate the data as well as
+The crawling script is also called in main.py hence running the main.py file will also generate the data as well as
 produce the analysis.
 
 The script is contained in imdb_spider.py file where the name of the spider is defined as 'imdbspider'.
@@ -52,8 +50,8 @@ Each field of the movie item is defined in items.py. The following movie data wi
 13) gross_worldwide_usd
 
 MAIN PROGRAM
-The main program for the project is main.py. The application also calls the crawling script (spider) from the module
-imdb_spider.py so that there is no need to run two scripts separately.
+The main program for the project is main.py. The application also calls the crawling script from the imdb_spider module
+so that there is no need to run two scripts separately.
 
 After running the crawling script and the IMDBTop250.csv file has been generated, the analysis module will be ran.
 This will give 2 figures with subplots for the analysis of the IMDB Top 250 data.

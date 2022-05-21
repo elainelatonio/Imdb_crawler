@@ -1,6 +1,5 @@
 from analysis import ImdbAnalysis
-from spiders.imdb_spider import ImdbSpider
-from scrapy.crawler import CrawlerProcess
+from imdb_spider import *
 import logging
 
 logging.basicConfig(filename='logs.log')

@@ -1,11 +1,11 @@
 import scrapy
-from imdbscrapy.items import Imdb_item
+from items import Imdb_item
 import re
 import logging
-
+from scrapy.crawler import CrawlerProcess
 
 class ImdbSpider(scrapy.Spider):
-    name = 'imdbspider'  # name of the spider, to be used with scrapy crawl command in command line
+    name = 'imdbspider'
     allowed_domains = ['imdb.com']  # sets the allowed domain to crawl
     start_urls = ['http://www.imdb.com/chart/top']  # sets initial url to crawl
 
@@ -62,3 +62,9 @@ class ImdbSpider(scrapy.Spider):
             if response.xpath("//li[@data-testid='title-boxoffice-cumulativeworldwidegross']/div/ul/li/span/text()").\
                    get() is not None else 0
         return movie
+
+# to run the crawler script as a standalone python file (i.e., not from main.py)
+if __name__ == "__main__":
+    process = CrawlerProcess()  # instantiates CrawlerProcess, a Scrapy utility to run a spider from a python script
+    process.crawl(ImdbSpider)  # runs the crawler with the given spider name defined in imdb_spider.py
+    process.start()  # the script will block here until the crawling is finished

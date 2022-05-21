@@ -9,8 +9,8 @@
 
 BOT_NAME = 'imdbscrapy'
 
-SPIDER_MODULES = ['imdbscrapy.spiders']
-NEWSPIDER_MODULE = 'imdbscrapy.spiders'
+SPIDER_MODULES = ['imdbscrapy']
+NEWSPIDER_MODULE = 'imdbscrapy'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
