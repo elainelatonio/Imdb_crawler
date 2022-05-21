@@ -1,0 +1,73 @@
+IMDBScrapy
+
+The project leverages on the Scrapy module to crawl data from IMDB and then, mainly Pandas and Matplotlib for
+the subsequent analysis.
+
+The structure of the project is givne below, following the default structure of a Scrapy project:
+(for more information, https://docs.scrapy.org/en/latest/topics/commands.html#default-structure-of-scrapy-projects)
+imdbscrapy
+  ├── docs
+  │ ├── README.md                       # brief summary and description of the project and components
+  │ └── IMDB Top 250 Analysis.docx      # summary of the analysis on crawled data
+  ├── scrapy.cfg                        # default Scrapy configuration file
+  └── imdbscrapy/
+    ├── __init__.py
+    ├── main.py                         # main application that runs both IMDB crawling script and analysis script
+    ├── analysis.py                     # python script to analyze IMDB data
+    ├── items.py                        # contains my custom item and fields
+    ├── middlewares.py                  # part of the default scrapy package (no amendment done)
+    ├── pipelines.py                    # part of the default scrapy package (no amendment done)
+    ├── settings.py                     # part of the default scrapy package (no amendment done)
+    ├── logs.log                        # log file
+    └── spiders
+        ├──__init__.py
+        └──imdb_spider.py               # scrapy spider to crawl IMDB data
+
+CRAWLING SCRIPT:
+The crawling script can be run on the command line with the following command if the Scrapy package is installed:
+    scrapy crawl imdbspider
+(Installing Scrapy - https://docs.scrapy.org/en/latest/intro/install.html
+More info on Scrapy tool commands: https://docs.scrapy.org/en/latest/topics/commands.html#available-tool-commands)
+
+The crawling script is also called in main.py hence running the python file will also generate the data as well as
+produce the analysis.
+
+The script is contained in imdb_spider.py file where the name of the spider is defined as 'imdbspider'.
+Using the Scrapy module, it will crawl the IMDB Top 250 page http://www.imdb.com/chart/top as well as each movie
+link to scrape the movie data. It will generate the IMDBTop250.csv file containing the data scraped.
+
+Each field of the movie item is defined in items.py. The following movie data will be obtained:
+1) rank
+2) movie_id
+3) title
+4) year
+5) movie_link
+6) genre
+7) rating
+8) votes
+9) origin
+10) runtime_mins
+11) awards_nominations
+12) awards_wins
+13) gross_worldwide_usd
+
+MAIN PROGRAM
+The main program for the project is main.py. The application also calls the crawling script (spider) from the module
+imdb_spider.py so that there is no need to run two scripts separately.
+
+After running the crawling script and the IMDBTop250.csv file has been generated, the analysis module will be ran.
+This will give 2 figures with subplots for the analysis of the IMDB Top 250 data.
+
+Scrapy already uses the logging module for event logging (for more information, https://docs.scrapy.org/en/latest/topics/logging.html)
+and I made no alteration to the Scrapy logs, except to set levels for some loggers to WARNING to reduce noise in the logs.
+Added custom logs for the analysis module to show info about the IMDB data and calculated correlation numbers.
+
+Analysis
+Pandas was mainly used for the analysis, with Matplotlib to show the graphical representations.
+Topic: What factors influence the IMDB rating? Is there a good predictor?
+Method: I measured the correlation of rating and various quantifiable factors available on the IMDB movie page.
+        I also looked at the average ratings across year of release, origin country, and genre.
+Please see the file 'IMDB Top 250 Analysis.docx' for details of the analysis.
+
+
+

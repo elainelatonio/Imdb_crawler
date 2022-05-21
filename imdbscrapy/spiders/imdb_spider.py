@@ -1,6 +1,7 @@
 import scrapy
 from imdbscrapy.items import Imdb_item
 import re
+import logging
 
 
 class ImdbSpider(scrapy.Spider):
@@ -9,6 +10,9 @@ class ImdbSpider(scrapy.Spider):
     start_urls = ['http://www.imdb.com/chart/top']
 
     custom_settings = {'FEEDS': {'IMDBTop250.csv': {"format": 'csv', 'overwrite': True}}}
+
+    def __init__(self):
+        logging.getLogger('scrapy.middleware').setLevel(logging.WARNING)
 
     def parse(self, response):
         number = 0

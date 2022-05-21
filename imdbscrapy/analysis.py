@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import logging
 
-logging.getLogger('matplotlib').setLevel(logging.WARNING)
 
 class ImdbAnalysis:
     # define the font size for plot text
@@ -15,23 +14,39 @@ class ImdbAnalysis:
     plt.rc('legend', fontsize=8)
     plt.rc('figure', titlesize=10)
 
-    def __init__(self):
-        self.data = pd.read_csv('IMDBTop250.csv').set_index('rank')
+    def __init__(self, filename):
+        # initialize analysis by getting file output of the spider, create a pandas dataframe
+        self.data = pd.read_csv(filename).set_index('rank')
+        # set logging level for imported module and create custom logger to view data and analysis info
+        logging.getLogger('matplotlib').setLevel(logging.WARNING)
+        self.logger = logging.getLogger('analysis')
+        logging.getLogger('analysis').setLevel(logging.INFO)
+        # clean and check data then perform calculations
+        self.clean_data()
+        self.check_data()
+        self.get_correlations()
+
+    # clean the data and convert to number format to allow calculations
+    def clean_data(self):
         self.data['awards_wins'] = self.data['awards_wins'].fillna(0)
         self.data['awards_nominations'] = self.data['awards_nominations'].fillna(0)
+        self.data.gross_worldwide_usd = pd.to_numeric(self.data.gross_worldwide_usd.str.replace(',', ''))
 
     def check_data(self):
-        print(self.data.info())  # should have 250 items
-        print(self.data.isnull().sum())  # check for columns with null values
-        print(self.data.describe())
+        self.data.info()  # show column names, count of non-null and data type
+        self.logger.warning(self.data.isnull().sum())  # check if any field has null values after cleaning the data
 
+    # log the calculated correlations
     def get_correlations(self):
-        print(self.data['rating'].corr(self.data['votes']))
-        print(self.data['rating'].corr(self.data['runtime_mins']))
-        print(self.data['rating'].corr(self.data['awards_wins']))
-        print(self.data['rating'].corr(self.data['gross_worldwide_usd']))
+        self.logger.info('Rating vs votes: %f ', self.data['rating'].corr(self.data['votes']))
+        self.logger.info('Rating vs Runtime: %f ', self.data['rating'].corr(self.data['runtime_mins']))
+        self.logger.info('Rating vs Awards: %f ', self.data['rating'].corr(self.data['awards_wins']))
+        self.logger.info('Rating vs Gross Worldwide: %f ', self.data['rating'].corr(self.data['gross_worldwide_usd']))
 
+    # show as graphical representation the correlations and average ratings
     def show_graphs(self):
+        # Look at correlation of rating with quantifiable factors
+        # Create a figure for subplots
         self.fig1, axs = plt.subplots(2, 2, figsize=(7.6, 7))
         self.fig1.suptitle('Correlations with IMDB Rating')
 
@@ -51,14 +66,12 @@ class ImdbAnalysis:
         axs[1, 0].set_xlabel("No. of awards won")
 
         # correlation of rating and gross box office
-        self.data.gross_worldwide_usd = pd.to_numeric(self.data.gross_worldwide_usd.str.replace(',', ''))
         axs[1, 1].scatter(x='gross_worldwide_usd', y='rating', data=self.data, color="orange")
         axs[1, 1].set_ylabel("Rating")
         axs[1, 1].set_xlabel("Gross box office (worldwide, USD bn)")
 
         # Look at average ratings per genre, release year, country of origin
-        # Create a figure2 for subplotes
-
+        # Create a figure2 for subplots
         self.fig2, axs = plt.subplots(1, 3, figsize=(15, 3))
         self.fig2.suptitle('Average IMDB Ratings per Genre, Year of Release, and Origin')
 
@@ -82,3 +95,8 @@ class ImdbAnalysis:
         self.fig2.tight_layout()
 
         plt.show()
+
+
+if __name__ == "__main__":
+    top250 = ImdbAnalysis('IMDBTop250.csv')
+    top250.show_graphs()
