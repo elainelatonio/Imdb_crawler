@@ -3,12 +3,12 @@ IMDBScrapy
 The project leverages on the Scrapy module to crawl data from IMDB and then, mainly Pandas and Matplotlib for
 the subsequent analysis.
 
-The structure of the project is givne below, following the default structure of a Scrapy project:
+The structure of the project is given below, following the default structure of a Scrapy project:
 (for more information, https://docs.scrapy.org/en/latest/topics/commands.html#default-structure-of-scrapy-projects)
 imdbscrapy
   ├── docs
   │ ├── README.md                       # brief summary and description of the project and components
-  │ └── IMDB Top 250 Analysis.docx      # summary of the analysis on crawled data
+  │ └── IMDB Top 250 Analysis.pdf       # summary of the analysis on crawled data
   ├── scrapy.cfg                        # default Scrapy configuration file
   └── imdbscrapy/
     ├── __init__.py
@@ -65,9 +65,9 @@ Added custom logs for the analysis module to show info about the IMDB data and c
 Analysis
 Pandas was mainly used for the analysis, with Matplotlib to show the graphical representations.
 Topic: What factors influence the IMDB rating? Is there a good predictor?
-Method: I measured the correlation of rating and various quantifiable factors available on the IMDB movie page.
-        I also looked at the average ratings across year of release, origin country, and genre.
-Please see the file 'IMDB Top 250 Analysis.docx' for details of the analysis.
+Method: I measured the correlation of rating and various quantifiable factors and looked at the average ratings
+        across categorical factors that are available on the IMDB Top 250 page and individual movie pages.
+Details: Please see the file 'IMDB Top 250 Analysis.pdf' for details of the analysis.
 
 
 

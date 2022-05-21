@@ -7,8 +7,8 @@ import logging
 class ImdbAnalysis:
     # define the font size for plot text
     plt.rc('font', size=8)
-    plt.rc('axes', titlesize=7)
-    plt.rc('axes', labelsize=8)
+    plt.rc('axes', titlesize=8)
+    plt.rc('axes', labelsize=7)
     plt.rc('xtick', labelsize=7)
     plt.rc('ytick', labelsize=7)
     plt.rc('legend', fontsize=8)
@@ -21,10 +21,9 @@ class ImdbAnalysis:
         logging.getLogger('matplotlib').setLevel(logging.WARNING)
         self.logger = logging.getLogger('analysis')
         logging.getLogger('analysis').setLevel(logging.INFO)
-        # clean and check data then perform calculations
+        # clean and check data
         self.clean_data()
         self.check_data()
-        self.get_correlations()
 
     # clean the data and convert to number format to allow calculations
     def clean_data(self):
@@ -36,39 +35,43 @@ class ImdbAnalysis:
         self.data.info()  # show column names, count of non-null and data type
         self.logger.warning(self.data.isnull().sum())  # check if any field has null values after cleaning the data
 
-    # log the calculated correlations
-    def get_correlations(self):
-        self.logger.info('Rating vs votes: %f ', self.data['rating'].corr(self.data['votes']))
-        self.logger.info('Rating vs Runtime: %f ', self.data['rating'].corr(self.data['runtime_mins']))
-        self.logger.info('Rating vs Awards: %f ', self.data['rating'].corr(self.data['awards_wins']))
-        self.logger.info('Rating vs Gross Worldwide: %f ', self.data['rating'].corr(self.data['gross_worldwide_usd']))
-
     # show as graphical representation the correlations and average ratings
     def show_graphs(self):
-        # Look at correlation of rating with quantifiable factors
+        # Look at scatter plot of rating versus quantifiable factors
         # Create a figure for subplots
         self.fig1, axs = plt.subplots(2, 2, figsize=(7.6, 7))
         self.fig1.suptitle('Correlations with IMDB Rating')
 
         # correlation of rating and votes
+        self.logger.info('Rating vs votes: %f ', self.data['rating'].corr(self.data['votes']))
         axs[0, 0].scatter(x='votes', y='rating', data=self.data, color="blue")
         axs[0, 0].set_ylabel("Rating")
         axs[0, 0].set_xlabel("Number of votes (mn)")
+        axs[0, 0].set_title("Rating vs Votes")
 
         # correlation of rating and runtime
+        self.logger.info('Rating vs Runtime: %f ', self.data['rating'].corr(self.data['runtime_mins']))
         axs[0, 1].scatter(x='runtime_mins', y='rating', data=self.data, color="green")
         axs[0, 1].set_ylabel("Rating")
         axs[0, 1].set_xlabel("Runtime (mins)")
+        axs[0, 1].set_title("Rating vs Runtime")
 
         # correlation of rating and wins
+        self.logger.info('Rating vs Awards: %f ', self.data['rating'].corr(self.data['awards_wins']))
         axs[1, 0].scatter(x='awards_wins', y='rating', data=self.data, color="red")
         axs[1, 0].set_ylabel("Rating")
         axs[1, 0].set_xlabel("No. of awards won")
+        axs[1, 0].set_title("Rating vs Awards")
 
         # correlation of rating and gross box office
-        axs[1, 1].scatter(x='gross_worldwide_usd', y='rating', data=self.data, color="orange")
+        last_10y = self.data[self.data['year'] > 2011]
+        self.logger.info('Rating vs Gross Worldwide: %f ', last_10y['rating'].corr(last_10y['gross_worldwide_usd']))
+        axs[1, 1].scatter(x='gross_worldwide_usd', y='rating', data=last_10y, color="orange")
         axs[1, 1].set_ylabel("Rating")
+        axs[1, 1].set_title("Rating vs Gross Worldwide (for movies in last 10 years)")
         axs[1, 1].set_xlabel("Gross box office (worldwide, USD bn)")
+
+        self.fig1.tight_layout()
 
         # Look at average ratings per genre, release year, country of origin
         # Create a figure2 for subplots

@@ -20,4 +20,3 @@ class Imdb_item(scrapy.Item):
     awards_wins = scrapy.Field()
     awards_nominations = scrapy.Field()
     gross_worldwide_usd = scrapy.Field()
-
