@@ -47,11 +47,12 @@ class ImdbSpider(scrapy.Spider):
     def parse_movie(self, response, movie):
         movie['movie_link'] = response.url
         movie['genre'] = response.xpath("//li[@data-testid='storyline-genres']/div/ul/li/a/text()").getall()
-        movie['runtime_mins'] = (int(response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").
-            getall()[0]) * 60 if 'hours' in response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").
-            getall() else 0) + (int(re.findall('(\d+) minutes', ''.join(map(str, response.xpath
-            ("//li[@data-testid='title-techspec_runtime']/div/text()").getall())))[0]) if 'minutes' in response.xpath(
-            "//li[@data-testid='title-techspec_runtime']/div/text()").getall() else 0)
+        hours = re.findall('(\d+)\s+hour', ' '.join(map(str,
+                            (response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()))))
+        minutes = re.findall('(\d+)\s+minute', ' '.join(map(str,
+                            (response.xpath("//li[@data-testid='title-techspec_runtime']/div/text()").getall()))))
+        movie['runtime_mins'] = (int(''.join(map(str,hours)))*60 if hours != [] else 0) + \
+                                (int(''.join(map(str,minutes))) if minutes != [] else 0)
         movie['origin'] = response.xpath("//li[@data-testid='title-details-origin']/div/ul/li/a/text()").getall()
         movie['awards_wins'] = ''.join(map(str, (re.findall('(\d+) wins', response.xpath(
             "//li[@data-testid='award_information']/div/ul/li/span/text()").getall()[0], re.IGNORECASE))))
@@ -66,5 +67,5 @@ class ImdbSpider(scrapy.Spider):
 # to run the crawler script as a standalone python file (i.e., not from main.py)
 if __name__ == "__main__":
     process = CrawlerProcess()  # instantiates CrawlerProcess, a Scrapy utility to run a spider from a python script
-    process.crawl(ImdbSpider)  # runs the crawler with the given spider name defined in imdb_spider.py
-    process.start()  # the script will block here until the crawling is finished
+    process.crawl(ImdbSpider)   # runs the crawler with the given spider class name
+    process.start()             # the script will block here until the crawling is finished
