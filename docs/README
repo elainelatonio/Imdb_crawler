@@ -1,8 +1,13 @@
 IMDBScrapy
 
-The project leverages on the Scrapy module to crawl data from IMDB and then, mainly Pandas and Matplotlib for
-the subsequent analysis.
+OVERVIEW
+The project aims to crawl the top 250 movie data from IMDB (https://www.imdb.com/chart/top) and perform an analysis
+based on the data.
 
+REQUIREMENTS
+The project uses Scrapy, Pandas, Matplotlib and Numpy aside from built-in modules hence these have to be first installed.
+
+STRUCTURE
 The structure of the project is given below, building on the default Scrapy project structure:
 (for more information - https://docs.scrapy.org/en/latest/topics/commands.html#default-structure-of-scrapy-projects
 Installing Scrapy - https://docs.scrapy.org/en/latest/intro/install.html)
@@ -17,9 +22,9 @@ imdbscrapy
     ├── main.py                         # main application that runs both IMDB crawling script and analysis script
     ├── analysis.py                     # python script to analyze IMDB data
     ├── items.py                        # contains my custom item and fields
-    ├── middlewares.py                  # part of the default scrapy package (no amendment done)
-    ├── pipelines.py                    # part of the default scrapy package (no amendment done)
-    ├── settings.py                     # part of the default scrapy package (no amendment done)
+    ├── middlewares.py                  # default from scrapy package
+    ├── pipelines.py                    # default from scrapy package
+    ├── settings.py                     # default from scrapy package
     ├── logs.log                        # log file
     └── imdb_spider.py                  # scrapy spider to crawl IMDB data
 
@@ -60,7 +65,7 @@ Scrapy already uses the logging module for event logging (for more information, 
 and I made no alteration to the Scrapy logs, except to set levels for some loggers to WARNING to reduce noise in the logs.
 Added custom logs for the analysis module to show info about the IMDB data and calculated correlation numbers.
 
-Analysis
+ANALYSIS
 Pandas was mainly used for the analysis, with Matplotlib to show the graphical representations.
 Topic: What factors influence the IMDB rating? Is there a good predictor?
 Method: I measured the correlation of rating and various quantifiable factors and looked at the average ratings
